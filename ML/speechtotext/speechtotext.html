@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <title>speech to text conversion</title>
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+ <div class="container">
+
+ <h1 class="text-center mt-5">
+
+ Speech to Text in JavaScript
+
+ </h1>
+
+ <div class="form-group">
+
+ <textarea id="textbox" rows="6" class="form-control"></textarea>
+
+ </div>
+
+ <div class="form-group">
+
+ <button id="start-btn" class="btn btn-danger btn-block">
+
+ Recognize
+
+ </button>
+
+ <p id="instructions">Press the recognize button</p>
+
+ </div>
+
+ </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    var speechRecognition = window.webkitSpeechRecognition
+
+var recognition = new speechRecognition()
+
+var textbox = $("#textbox")
+
+var instructions = $("#instructions")
+
+var content = ''
+
+recognition.continuous = true
+
+// recognition is started
+
+recognition.onstart = function() {
+
+ instructions.text("Voice Recognition is On")
+
+}
+
+recognition.onspeechend = function() {
+
+ instructions.text("No Activity")
+
+}
+
+recognition.onerror = function() {
+
+ instruction.text("Try Again")
+
+}
+
+recognition.onresult = function(event) {
+
+ var current = event.resultIndex;
+
+ var transcript = event.results[current][0].transcript
+
+
+
+ content += transcript
+
+ textbox.val(content)
+
+}
+
+$("#start-btn").click(function(event) {
+
+ recognition.start()
+
+})
+
+textbox.on('input', function() {
+
+ content = $(this).val()
+
+})
+</script>
+<div class="footer">
+<p>Copyright © <a href="#">Rahul Parajuli</a> All rights reserved.</p>
+</div>
+<style>
+    body {
+  background-color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+
+</style>
+
+</body>
+
+</html>

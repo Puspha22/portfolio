@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.7.1/dist/ml5.min.js"></script>
+  <title>Rahul Parajuli || Machine Learning || video detector</title>
+</head>
+<body>
+  <div class = "container">
+<h1>
+  Hey!! welcome.
+</h1>
+<p> press on start detecting for detection</p>
+  <button id="toggleVideoEl" onclick="toggleVideo()">Hide Video</button>
+  <button id="toggleDetectingEl" onclick="toggleDetecting()">Start Detecting</button>
+</div>
+<div class = "copyright">
+  <p>© 2022 Rahul Parajuli</p>
+</div>
+
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+.container{
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top:2%;
+    margin-left: 60%;
+  }
+
+video {
+  border: 1px solid blue;
+  margin: 0 auto;
+  display: block;
+  position: sticky !important;
+  top: 0;
+  left: 60%;
+  right: 0;
+  bottom: 2%;
+
+}
+.copyright{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+}
+
+/* #toggleDetectingEl{
+  background-color: white;
+  color: black;
+} */
+#toggleDetectingEl{
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #ffffff;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#toggleDetectingEl:hover,
+#toggleDetectingEl:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#toggleDetectingEl:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+#toggleVideoEl {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #ffffff;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#toggleVideoEl:hover,
+#toggleVideoEl:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#toggleVideoEl:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+  </style>
+
+  <script>
+    // declare global variable
+let video = null; // video element
+let detector = null; // detector object
+let detections = []; // store detection result
+let videoVisibility = false;
+let detecting = false;
+
+const toggleVideoEl = document.getElementById('toggleVideoEl');
+const toggleDetectingEl = document.getElementById('toggleDetectingEl');
+
+document.body.style.cursor = 'wait';
+
+function preload() {
+  detector = ml5.objectDetector('cocossd');
+  console.log('detector object is loaded');
+}
+
+function setup() {
+  createCanvas(600, 450);
+  video = createCapture(VIDEO);
+  video.size(600, 450);
+  console.log('video element is created');
+  video.elt.addEventListener('loadeddata', function() {
+    if (video.elt.readyState >= 2) {
+      document.body.style.cursor = 'default';
+      console.log('video element is ready! Click "Start Detecting" to see the magic!');
+    }
+  });
+}
+
+function draw() {
+  if (!video || !detecting) return;
+  image(video, 0, 0);
+  for (let i = 0; i < detections.length; i++) {
+    drawResult(detections[i]);
+  }
+}
+
+function drawResult(object) {
+  drawBoundingBox(object);
+  drawLabel(object);
+}
+
+function drawBoundingBox(object) {
+  stroke('green');
+  strokeWeight(4);
+  noFill();
+  rect(object.x, object.y, object.width, object.height);
+}
+
+function drawLabel(object) {
+  noStroke();
+  fill('white');
+  textSize(24);
+  text(object.label, object.x + 10, object.y + 24);
+}
+
+function onDetected(error, results) {
+  if (error) {
+    console.error(error);
+  }
+  detections = results;
+  if (detecting) {
+    detect(); 
+  }
+}
+
+function detect() {
+  detector.detect(video, onDetected);
+}
+
+function toggleVideo() {
+  if (!video) return;
+  if (!videoVisibility) {
+    video.hide();
+    toggleVideoEl.innerText = 'Show Video';
+  } else {
+    video.show();
+    toggleVideoEl.innerText = 'Hide Video';
+  }
+  videoVisibility = !videoVisibility;
+}
+
+function toggleDetecting() {
+  if (!video || !detector) return;
+  if (!detecting) {
+    detect();
+    toggleDetectingEl.innerText = 'Stop Detecting';
+  } else {
+    toggleDetectingEl.innerText = 'Start Detecting';
+  }
+  detecting = !detecting;
+}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Rahul Parajuli || machine learning || Chatbot</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <!-- <link rel="stylesheet" href="../assets/css/templatemo-cyborg-gaming.css"> -->
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+
+<body>
+    <!-- <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+          <span class="dot"></span>
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div> -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="../ML.html" class="logo">
+                          <h1>Home</h1>  
+                          <!-- <img src="../img/logo/R2.png" width="30px" height="30px" > -->
+                        </a>
+                        <style>
+                            .main-nav .logo h1{
+                                color: rgb(255, 255, 255);
+                                background-color: rgb(25, 76, 154);
+                                padding: 10%;
+                                border-radius: 20%;
+                                font-size: 25px;
+                                font-weight: 700;
+                                margin: 0;
+                                padding: 0;
+                                margin-top: 25px;
+                                margin-right: 1000px;
+                                line-height: 1;
+                                text-transform: uppercase;
+                                font-family: 'Poppins', sans-serif;
+                                /* align-items: center; */
+                                /* justify-content: left; */
+
+                            }
+                        </style>
+
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Search End ***** -->
+                        <!-- <div class="search-input">
+                          <form id="search" action="#">
+                            <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                            <i class="fa fa-search"></i>
+                          </form>
+                        </div> -->
+                        <!-- ***** Search End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <!-- <ul class="nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="browse.html">Browse</a></li>
+                            <li><a href="details.html" class="active">Details</a></li>
+                            <li><a href="streams.html">Streams</a></li>
+                            <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                        </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a> -->
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                   
+                </div>
+            </div>
+            
+        </div>
+        
+      </header>
+      <!-- ***** Header Area End ***** -->
+    
+      
+    <div id="container" class="container">
+        <div class="headers">
+
+            <h1>welcome to rahul's website</h1>
+            <h3>lets start talking</h3>
+           </div>
+        <img src="../assets/images/200e8d139737079.6234b0487404d.gif" height="200vh", width="400vh" alt="Chatbot clipart">
+         <div id="chat" class="chat">
+          <div id="messages" class="messages">
+          </div>
+          <input id="input" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
+        </div>
+      </div>
+      <style>
+        * {
+  box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+
+}
+
+body {
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, Helvetica,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	background-color: silver;
+	height: 100%;
+	margin: 0;
+}
+
+span {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.container {
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.footer{
+  align-items: center;
+}
+
+.chat {
+	height: 300px;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	align-items: center;
+} 
+
+::-webkit-input-placeholder { 
+	color: .711 
+}
+ 
+input { 
+	border: 0; 
+	padding: 15px; 
+	margin-left: auto;
+	border-radius: 10px; 
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	height: 90%;
+	width: 100%;
+	background-color: white;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+#bot {
+	margin-right: auto;
+}
+
+#user {
+	margin-left: auto;
+}
+
+
+.bot {
+	font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,  
+	monospace;
+}
+
+.avatar {
+	height: 25px;
+}
+
+.response {
+	display: flex;
+	align-items: center;
+	margin: 1%;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 980px) {
+  .container {
+		flex-direction: column; 
+		justify-content: flex-start;
+	}
+	.chat {
+		width: 75vw;
+		margin: 10vw;
+	}
+}
+
+      </style>
+      <script>
+
+const inputField = document.getElementById("input");
+inputField.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    let input = inputField.value;
+    inputField.value = "";
+    output(input);
+  }
+});
+const utterances = [ 
+["how are you", "how is life", "how are things", "How are you","How is life", "How are things"],        //0
+  ["hi", "hey", "hello", "good morning", "good afternoon", "Hi","Hey", "Hello", "Good morning", "Good Afternoon"],      //1
+  ["what are you doing", "what is going on", "what is up", "What are you doing", "What is going on", "What is up"],      //2
+  ["how old are you", "How old are you","What is your age", "what is your age"],					//3
+  ["who are you", "are you human", "are you bot", "are you human or bot","Who are you?", "Are you human", "Are you human or bot"],   //4 
+    ["who created you", "who made you", "Who created you", "Who made you", "who is your creator", "Who is your creator"],				//5
+    ["your name please", "your name", "may i know your name", "what is your name","Your name please", "Your name", "May i know your name", "what is your name"],  //6
+    ["i love you", "I love you", "I love rahul", "Marry me"],						//7
+    ["happy", "good", "fun", "wonderful", "fantastic", "cool","Happy", "Good", "Fun", "Wonderful", "Fantastic"],	//8
+    ["bad", "bored", "tired", "Bad", "Bored", "Tired"],					//9
+    ["help me", "tell me story", "tell me joke", "Help me", "Tell me joke", "Joke", "joke", "Tell me a story"],			//10
+    ["ah", "yes", "ok", "okay", "nice", "Ah", "Yes", "Ok", "Okay", "Nice"],				//11
+    ["thanks", "thank you", "Thanks", "Thank you", "thank your for help"],					//12
+    ["bye", "good bye", "goodbye", "see you later","Bye", "Good bye", "Goodbye", "Goodnight", "See you later"],		//13
+    ["what should i eat today", "what should i eat", "What should i eat", "What should i eat today"],					//14
+    ["bro", "Bro", "Rahul", "Whats up", "rahul"],							//15
+    ["what", "why", "how", "where", "when", "What", "Why", "How", "Where", "When"],			//16
+    ["no","not sure","maybe","no thanks", "No", "Not sure", "Maybe", "No thanks"],		//17
+    ['tech stack', "Tech stack","your tech stack", "coding","Coding", "what is your stack","What is your tech stack", "what does rahul do","What does rahul do","which tech stack does rahul use?", "Which tech stack does rahul use", "Which language do you use", "which language do you use", "What language do you use", "what language do you use"],//18
+    ["where do you work","Where do you work", "Where do you work ?",'what do you do for living',"What do you do for living",'what is your work', "What is your work","work", "Work", "job", "Job"] ,//19
+    ['are you available for job', "Are you available for job", 'are your free', 'are you open to work', "do you need job", "do you want job", "Are you free to work", "are you free to work"], //20
+    ['your contact', "Your contact", "contact", "Contact", "how can i contact you","How can i contact you", 'your details', "Your details", "tell me about you", "Tell me about you", "Send me your details", "send me your details"], //21
+    ['where do you live?', "where are you located", "location", "Where does rahul live", "Where do you live", "Where are you from", "where are your from", "Location", "Send me location"], // 22
+    ['Your resume', "Send me your resume", "your resume", "send me your resume", "Resume", "resume"], //23
+    ['k xa', "k cha", "Nepali ho", "nepali"]
+];
+ 
+// Possible responses corresponding to triggers
+ 
+const answers = [
+   [
+    "Fine... how are you?",
+    "Pretty well, how are you?",
+    "Fantastic, how are you?"
+
+  ],                                                                                  	//0
+  [
+    "Hello!", "Hi!", "Hey!", "Hi there!", "Howdy", "Hola","Namaste"
+  ],						//1
+  [
+    "Nothing much",
+    "I am at binary from rahul's server",
+    "I don't know actually",
+    "I am fixing 0's and 1's",
+    "I am a bot so i never sleep",
+    "I am a bot so i never get tired",
+    "snoorrrrrr.....",
+    "wanna sleep for ages now"
+  ],						//2
+  ["I am infinite"],					//3
+  ["I am just a bot for rahul parajuli", "I am a bot. What are you?"],	//4
+  
+ 
+    ["Rahul parajuli"],					//5
+    ["You can call me Drox the rahul's bot", "I'm Rahul's bot ask him!"],		//6
+    ["I love you too", "Me too"],				//7
+    ["Have you ever felt bad?", "Glad to hear it"],	//8
+    ["Why?", "Cheer up buddy"],				//9
+    ["What about?", "Once upon a time..."],		//10
+    ["Tell me a story", "Tell me a joke", "Tell me about yourself"],	//11
+    ["You're welcome"],					//12
+    ["Goodbye", "See you later"],				//13
+    ["MoMo", "Pizzaaaaa"],					//14
+    ["Bro!"],						//15
+    ["Yes?"],						//16
+    ["Ok", "No problem", "Bye"]	,			//17
+    ['I am a machine learning engineer, Data scientist and backend developer i am good with python, flask, fastAPI and some portion of frontend development[reactjs], and quite interested in blockchain technology.', "I am a machine learning engineer,backend developer i am good with python, flask, fastAPI and some portion of frontend development[reactjs], and quite interested in blockchain technology."], //18
+    ["I work at a company called 'Eydean Inc' as a machine learning engineer and backend developer"], //19
+    ['I am not available for job right now but you can contact me at- rahul.parajuli27@gmail.com'],
+    ['You can contact me at- rahul.parajuli27@gmail.com, my phonenumber is - +9779813350184 and i live in baneshwor, kathmandu.'], //21
+    ['I live in wire and my creator lives in baneshwor, kathmandu'], //22
+    ['Ho ni', "Nepali honi", "thik xa!!!"]
+
+];
+ 
+// For any other user input
+ 
+const alternatives = [
+  "Go on...",
+  "Try again",
+    "I'm listening...",
+    "Bro...",
+    "I don't understand...",
+    "machines are hard to understand so please repeat :("
+];
+
+function output(input) {
+  let product;
+  let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
+  text = text
+    .replace(/ a /g, " ")
+    .replace(/whats/g, "what is")
+    .replace(/please /g, "")
+    .replace(/ please/g, "")
+    .replace(/r u/g, "are you");
+
+  if (compare(utterances, answers, text)) {
+    // Search for exact match in triggers
+    product = compare(utterances, answers, text);
+  } 
+  else {
+    product = alternatives[Math.floor(Math.random() * alternatives.length)];
+  }
+
+  addChatEntry(input, product);
+}
+
+function compare(utterancesArray, answersArray, string) {
+  let reply;
+  let replyFound = false;
+  for (let x = 0; x < utterancesArray.length; x++) {
+    for (let y = 0; y < utterancesArray[x].length; y++) {
+      if (utterancesArray[x][y] === string) {
+        let replies = answersArray[x];
+        reply = replies[Math.floor(Math.random() * replies.length)];
+        replyFound = true;
+        break;
+      }
+    }
+    if (replyFound) {
+      break;
+    }
+  }
+  return reply;
+}
+
+function addChatEntry(input, product) {
+  const messagesContainer = document.getElementById("messages");
+  let userDiv = document.createElement("div");
+  userDiv.id = "user";
+  userDiv.className = "user response";
+  userDiv.innerHTML = `<span>${input}</span>`;
+  messagesContainer.appendChild(userDiv);
+
+  let botDiv = document.createElement("div");
+  let botText = document.createElement("span");
+  botDiv.id = "bot";
+  botDiv.className = "bot response";
+  botText.innerText = "Typing...";
+  botDiv.appendChild(botText);
+  messagesContainer.appendChild(botDiv);
+
+  messagesContainer.scrollTop =
+    messagesContainer.scrollHeight - messagesContainer.clientHeight;
+
+  setTimeout(() => {
+    botText.innerText = `${product}`;
+  }, 2000);
+}
+
+      </script>
+        <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../assets/js/isotope.min.js"></script>
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/tabs.js"></script>
+  <script src="../assets/js/popup.js"></script>
+  <script src="../assets/js/custom.js"></script>
+       <footer>
+        <div class="footer">
+            <div class="Copyright">
+              <p>Copyright © <a href="#">Rahul Parajuli</a> All rights reserved. 
+            </div>
+        </div>
+      </footer>
+</body>
+
+</html>

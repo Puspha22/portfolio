@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Rahul Parajuli || machine learning model || Image classification</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="../ML.html" class="logo">
+                      <h1> Home</h1>  
+                      <!-- <img src="../img/logo/R2.png" width="30px" height="30px" > -->
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <!-- <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div> -->
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <!-- <ul class="nav">
+                        <li><a href="ML.html">Home</a></li>
+                        <li><a href="">Browse</a></li>
+                        <li><a href="ML.html" class="active">ML projects</a></li>
+                        <li><a href="streams.html">Streams</a></li> -->
+                        <!-- <li><a href="profile.html">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li> -->
+                    <!-- </ul>    -->
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+          <h1> Image Classification</h1>
+          <h2>Check what your image contains</h2>
+          <div id="result">Upload a file and and press submit, wait until it is Scanning ...</div>
+          <style>
+            #result {
+              font-size: 32px;
+              font-weight: bold;
+              color: rgb(250, 175, 132);
+            }
+          </style>
+          <input type="file" id="actual-btn" hidden/>
+          
+          <!-- form to get image and pass io gotResult function -->
+          <form id="myForm" action="javascript:void(0);">
+            <input type="file" id="file" name="file" accept="image/*" onchange="gotResult(this.files[0])">
+            <input type="submit" value="Submit">
+          </form>
+          <div id="img-container">
+            <img id="img" />
+            <style>
+              #img {
+                width: 100%;
+                height: auto;
+              }
+            </style>
+          </div>
+          <style>
+            #img-container {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            #img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          </style>
+         
+
+
+
+<!-- <label for="images" class="drop-container">
+  <span class="drop-title">Drop files here</span>
+  <input type="file" id="images" accept="image/*" required, onchange="gotResult(this.files[0])">
+</label> -->
+
+<style>
+  .drop-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+  background: #eee;
+  border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+  color: #222;
+}
+
+.drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+</style>
+<script>
+  // Initialize the Image Classifier method with MobileNet
+  const classifier = ml5.imageClassifier('MobileNet', modelReady);
+  
+  // When the model is loaded
+  function modelReady() {
+    console.log('Model is ready!!!');
+  }
+  
+  // Get a prediction for the current video frame
+  function gotResult(error, results) {
+    // Display any error
+    if (error) {
+      console.error(error);
+    }
+    console.log(results);
+    // confidence score
+    document.getElementById('result').innerHTML = results[0].label + ' ' + results[0].confidence.toFixed(2);
+    document.getElementById('result').innerHTML = results[0].label;
+  }
+  
+  // Set up an event listener for the image upload
+  document.getElementById('file').addEventListener('change', function() {
+    // Get the image
+    const img = document.getElementById('img');
+    // Get the file
+    const file = document.getElementById('file').files[0];
+    // Create a new FileReader
+    const reader = new FileReader();
+    // Add an event listener for when the FileReader loads
+    reader.addEventListener("load", function () {
+      // Convert image file to base64 string
+      img.src = reader.result;
+      // Make prediction with the selected image
+      const element = document.getElementById("result");
+      classifier.classify(img, gotResult);
+      let num = results[0].confidence * 100; 
+      element.innerHTML = results[0].label + "<br>Confidence: " + num.toFixed(2) + "%";
+    }, false);
+    // Check if the file is an image
+    if (file) {
+      // Read the file
+      reader.readAsDataURL(file);
+      
+    }
+  });
+  </script>
+          <!-- <img id="image" src="assets/images/dogs.jpeg" width="100%"> -->
+          <!-- <script>
+            // Initialize Image Classifier with MobileNet.
+            const classifier =  ml5.imageClassifier('MobileNet');
+            classifier.classify(document.getElementById("image"), gotResult);
+            
+            // Function to run when results arrive
+            function gotResult(error, results) {
+              const element = document.getElementById("result");
+              if (error) {
+                element.innerHTML = error;
+              } else {
+                let num = results[0].confidence * 100;
+                element.innerHTML = results[0].label + "<br>Confidence: " + num.toFixed(2) + "%";
+              }
+            }
+            </script> -->
+          <!-- ***** Featured Start ***** -->
+          <!-- <div class="row">
+            <div class="col-lg-12">
+              <div class="feature-banner header-text">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <img src="assets/images/feature-left.jpg" alt="" style="border-radius: 23px;">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="thumb">
+                      <img src="assets/images/feature-right.jpg" alt="" style="border-radius: 23px;">
+                      <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ***** Featured End ***** -->
+
+          <!-- ***** Details Start ***** -->
+          <!-- <div class="game-details">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Fortnite Details</h2>
+              </div>
+              <div class="col-lg-12">
+                <div class="content">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="left-info">
+                        <div class="left">
+                          <h4>Fortnite</h4>
+                          <span>Sandbox</span>
+                        </div>
+                        <ul>
+                          <li><i class="fa fa-star"></i> 4.8</li>
+                          <li><i class="fa fa-download"></i> 2.3M</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="right-info">
+                        <ul>
+                          <li><i class="fa fa-star"></i> 4.8</li>
+                          <li><i class="fa fa-download"></i> 2.3M</li>
+                          <li><i class="fa fa-server"></i> 36GB</li>
+                          <li><i class="fa fa-gamepad"></i> Action</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="assets/images/details-01.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="assets/images/details-02.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="assets/images/details-03.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
+                    </div>
+                    <div class="col-lg-12">
+                      <p>Cyborg Gaming is free HTML CSS website template provided by TemplateMo. This is Bootstrap v5.2.0 layout. You can make a <a href="https://paypal.me/templatemo" target="_blank">small contribution via PayPal</a> to info [at] templatemo.com and thank you for supporting. If you want to get the PSD source files, please contact us. Lorem ipsum dolor sit consectetur es dispic dipiscingei elit, sed doers eiusmod lisum hored tempor.</p>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="main-border-button">
+                        <a href="#">Download Fortnite Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ***** Details End ***** -->
+
+          <!-- ***** Other Start ***** -->
+          <!-- <div class="other-games">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4><em>Other Related</em> Games</h4>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <img src="assets/images/game-01.jpg" alt="" class="templatemo-item">
+                  <h4>Dota 2</h4><span>Sandbox</span>
+                  <ul>
+                    <li><i class="fa fa-star"></i> 4.8</li>
+                    <li><i class="fa fa-download"></i> 2.3M</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <img src="assets/images/game-02.jpg" alt="" class="templatemo-item">
+                  <h4>Dota 2</h4><span>Sandbox</span>
+                  <ul>
+                    <li><i class="fa fa-star"></i> 4.8</li>
+                    <li><i class="fa fa-download"></i> 2.3M</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <img src="assets/images/game-03.jpg" alt="" class="templatemo-item">
+                  <h4>Dota 2</h4><span>Sandbox</span>
+                  <ul>
+                    <li><i class="fa fa-star"></i> 4.8</li>
+                    <li><i class="fa fa-download"></i> 2.3M</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <img src="assets/images/game-02.jpg" alt="" class="templatemo-item">
+                  <h4>Dota 2</h4><span>Sandbox</span>
+                  <ul>
+                    <li><i class="fa fa-star"></i> 4.8</li>
+                    <li><i class="fa fa-download"></i> 2.3M</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <img src="assets/images/game-03.jpg" alt="" class="templatemo-item">
+                  <h4>Dota 2</h4><span>Sandbox</span>
+                  <ul>
+                    <li><i class="fa fa-star"></i> 4.8</li>
+                    <li><i class="fa fa-download"></i> 2.3M</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <img src="assets/images/game-01.jpg" alt="" class="templatemo-item">
+                  <h4>Dota 2</h4><span>Sandbox</span>
+                  <ul>
+                    <li><i class="fa fa-star"></i> 4.8</li>
+                    <li><i class="fa fa-download"></i> 2.3M</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ***** Other End ***** -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © <a href="#">Rahul Parajuli</a> All rights reserved. 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="../assets/js/isotope.min.js"></script>
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/tabs.js"></script>
+  <script src="../assets/js/popup.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+
+  </body>
+
+</html>
