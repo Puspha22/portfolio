@@ -112,9 +112,13 @@
             <p>
               My journey in data engineering and machine learning has been driven by a fascination with extracting meaningful patterns from complex datasets. Throughout my career, I've worked across healthcare, e-commerce, and infrastructure development projects, bringing data-driven solutions to diverse business challenges.
             </p>
-            <p>
-              When I'm not coding or analyzing data, I enjoy exploring new technologies, learning new skills, and continuously expanding my knowledge in the ever-evolving field of data science.
-            </p>
+            
+            <ul class="about-bullets">
+              <li>Passionate about developing efficient data pipelines and systems that power real-world insights</li>
+              <li>Experience working with US healthcare, e-commerce, and international development projects</li>
+              <li>Committed to continuous learning and staying current with emerging technologies</li>
+            </ul>
+            
             <div class="about-buttons">
               <a href="mailto:puspharajpandey@gmail.com" class="resdown">Email me</a>
               <button class="resdown" onclick="resumes()">Download resume</button>
@@ -163,36 +167,36 @@
             <div class="resume-item">
               <h4 class="highlight-blue">Data Engineer</h4>
               <h4>June 2023 - August 2024</h4>
-              <p><em>Cedar Gate Technologies</em></p>
+              <p><em>Cedar Gate Technologies</em> <a href="#" onclick="openExperienceLetter('cedar')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
               <ul>
-                <li>Analyzed US healthcare data to identify patient cost distributions and the legitimacy of their insurance claims.</li>
-                <li>Cleaned, transformed, aggregated, and mapped raw patient data to a company-wide schema.</li>
-                <li>Standardized fields like relationship codes, insurance plans, etc., and conducted member information matching across data sources.</li>
-                <li>Utilized statistical techniques to interpret and analyze member demography and member months data.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4 class="highlight-blue">Associate Machine Learning Engineer and Python Developer</h4>
-              <h4>November 2021 - January 2023</h4>
-              <p><em>Dekods INC.</em></p>
-              <ul>
-                <li>Cleaned and processed 100,000 record files for a UNICEF initiative to upgrade infrastructures in rural Nepal.</li>
-                <li>Carried out EDA using Pandas and Python; created data cleaning and transformation scripts.</li>
-                <li>Developed and implemented a PowerBI dashboard to display key metrics using DAX and visualization best practices.</li>
-                <li>Developed sales forecasting models using ARIMA and SARIMA.</li>
-                <li>Built a recommendation system using cosine similarity and NMF.</li>
+                <li>Analyzed US healthcare data to identify patient cost distributions and insurance claim legitimacy.</li>
+                <li>Cleaned, transformed, and mapped raw patient data to company-wide schema.</li>
+                <li>Standardized fields and conducted member information matching across data sources.</li>
+                <li>Applied statistical techniques to interpret member demography and member months data.</li>
               </ul>
             </div>
             <div class="resume-item">
               <h4 class="highlight-blue">Freelance Data Analytics Consultant</h4>
               <h4>Project-based</h4>
+              <p><em>Dekods INC.</em> <a href="#" onclick="openExperienceLetter('dekods')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
+              <ul>
+                <li>Processed 100,000+ records for UNICEF rural infrastructure initiative in Nepal.</li>
+                <li>Performed exploratory data analysis using Pandas and Python.</li>
+                <li>Created data cleaning and transformation scripts for large datasets.</li>
+                <li>Developed PowerBI dashboards with DAX to visualize key metrics for stakeholders.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4 class="highlight-blue">Associate Machine Learning Engineer and Python Developer</h4>
+              <h4>November 2021 - January 2023</h4>
               <p><em>Eydean INC.</em></p>
               <ul>
-                <li>Developed a chatbot for an e-commerce client using NLP and neural networks.</li>
-                <li>Built a Logistic Management System using Dijkstra's algorithm and OpenStreetMap.</li>
-                <li>Designed a data pipeline with ELK and Python to build a sales dashboard in Kibana.</li>
-                <li>Created ETL pipelines to integrate multiple databases into warehouses.</li>
-                <li>Built scalable backend systems with Flask, FastAPI, and MongoDB.</li>
+                <li>Built sales forecasting models using ARIMA and SARIMA time series analysis.</li>
+                <li>Developed recommendation systems using cosine similarity and Non-negative matrix factorization techniques.</li>
+                <li>Created an e-commerce chatbot using NLP and neural networks.</li>
+                <li>Designed data pipelines with ELK stack and built dashboards in Kibana.</li>
+                <li>Implemented ETL processes to integrate data from multiple databases into warehouses.</li>
+                <li>Developed scalable backend systems using Flask, FastAPI, and MongoDB.</li>
               </ul>
             </div>
           </div>
@@ -258,82 +262,161 @@
       <div class="container">
         <div class="section-title">
           <h2>Skills</h2>
-          <p>My skills are not limited to the following, but these represent my core technical competencies and areas of expertise.</p>
+          <p>My technical toolkit spans multiple domains, enabling me to deliver end-to-end data and ML solutions.</p>
+        </div>
+        
+        <!-- Skills Legend -->
+        <div class="skills-legend">
+          <div class="legend-item">
+            <div class="legend-color advanced"></div>
+            <span>Advanced</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color intermediate"></div>
+            <span>Intermediate</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color basic"></div>
+            <span>Basic</span>
+          </div>
         </div>
 
-        <div class="row skills-content">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="skill-category">Software Development</h3>
-            <div class="progress">
-              <span class="skill">Python <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+        <div class="skills-container">
+          <!-- Software Development Skills -->
+          <div class="skills-category" data-aos="fade-up">
+            <div class="category-header">
+              <i class="bx bx-code-alt"></i>
+              <h3>Software Development</h3>
             </div>
-            
-            <div class="progress">
-              <span class="skill">SQL <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="skills-grid">
+              <!-- Advanced (Blue) -->
+              <div class="skill-card advanced">
+                <i class="bx bxl-python"></i>
+                <span>Python</span>
               </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">MongoDB <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="skill-card advanced">
+                <i class="bx bx-data"></i>
+                <span>Pandas</span>
               </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">Flask/FastAPI <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="skill-card advanced">
+                <i class="bx bx-table"></i>
+                <span>SQL</span>
               </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">Docker <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="skill-card advanced">
+                <i class="bx bxl-git"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-card advanced">
+                <i class="bx bx-server"></i>
+                <span>Flask</span>
+              </div>
+              
+              <!-- Intermediate (Green) -->
+              <div class="skill-card intermediate">
+                <i class="bx bx-cube-alt"></i>
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-card intermediate">
+                <i class="bx bxl-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-card intermediate">
+                <i class="bx bx-bolt-circle"></i>
+                <span>FastAPI</span>
+              </div>
+              
+              <!-- Basic (Yellow) -->
+              <div class="skill-card basic">
+                <i class="bx bxl-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="skill-card basic">
+                <i class="bx bxl-css3"></i>
+                <span>CSS</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="skill-category">Data & Machine Learning</h3>
-            <div class="progress">
-              <span class="skill">Data Engineering <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          <!-- Data Skills -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-header">
+              <i class="bx bx-line-chart"></i>
+              <h3>Data Engineering & ML</h3>
+            </div>
+            <div class="skills-grid">
+              <!-- Advanced (Blue) -->
+              <div class="skill-card advanced">
+                <i class="bx bx-analyse"></i>
+                <span>Data Engineering</span>
+              </div>
+              <div class="skill-card advanced">
+                <i class="bx bx-brain"></i>
+                <span>Machine Learning</span>
+              </div>
+              <div class="skill-card advanced">
+                <i class="bx bx-transfer-alt"></i>
+                <span>ETL</span>
+              </div>
+              
+              <!-- Intermediate (Green) -->
+              <div class="skill-card intermediate">
+                <i class="bx bx-camera"></i>
+                <span>Computer Vision</span>
+              </div>
+              <div class="skill-card intermediate">
+                <i class="bx bx-chat"></i>
+                <span>NLP</span>
+              </div>
+              <div class="skill-card intermediate">
+                <i class="bx bx-cylinder"></i>
+                <span>Big Data</span>
+              </div>
+              
+              <!-- Basic (Yellow) -->
+              <div class="skill-card basic">
+                <i class="bx bx-scatter-chart"></i>
+                <span>ELK</span>
+              </div>
+              <div class="skill-card basic">
+                <i class="bx bx-wind"></i>
+                <span>Airflow</span>
+              </div>
+              <div class="skill-card basic">
+                <i class="bx bx-network-chart"></i>
+                <span>Kafka</span>
               </div>
             </div>
-            
-            <div class="progress">
-              <span class="skill">ETL Processes <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
+          </div>
 
-            <div class="progress">
-              <span class="skill">Machine Learning <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+          <!-- General Tools -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-header">
+              <i class="bx bx-wrench"></i>
+              <h3>General Tools</h3>
             </div>
-            
-            <div class="progress">
-              <span class="skill">NLP & Computer Vision <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="skills-grid">
+              <!-- Advanced (Blue) -->
+              <div class="skill-card advanced">
+                <i class="bx bx-bar-chart-alt-2"></i>
+                <span>PowerBI</span>
               </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">Big Data Tools (ELK, Airflow, Kafka) <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="skill-card advanced">
+                <i class="bx bx-data"></i>
+                <span>DBeaver</span>
+              </div>
+              <div class="skill-card advanced">
+                <i class="bx bx-table"></i>
+                <span>MySQL Workbench</span>
+              </div>
+              
+              <!-- Intermediate (Green) -->
+              <div class="skill-card intermediate">
+                <i class="bx bxl-microsoft"></i>
+                <span>Microsoft Office</span>
+              </div>
+              <div class="skill-card intermediate">
+                <i class="bx bxl-aws"></i>
+                <span>AWS</span>
               </div>
             </div>
           </div>
@@ -354,11 +437,19 @@
             <div class="certification-item">
               <h4><i class="bi bi-award-fill"></i> AWS Academy Graduate - AWS Academy Data Analytics</h4>
               <p><a href="https://www.credly.com/badges/9b876ed2-a784-4f10-bf6b-fcf7f80c0d45/public_url" target="_blank">View Certificate</a></p>
+              <ul>
+                <li>Cloud data analytics and processing technologies</li>
+                <li>AWS data services including S3, Redshift, and Athena</li>
+              </ul>
             </div>
             
             <div class="certification-item">
               <h4><i class="bi bi-award-fill"></i> Python for Everybody Specialization (Coursera)</h4>
               <p><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/JQ6J7FTSDAG6" target="_blank">View Certificate</a></p>
+              <ul>
+                <li>Comprehensive Python programming fundamentals</li>
+                <li>Data structures, web data, and databases</li>
+              </ul>
             </div>
             
             <div class="certification-item">
@@ -391,16 +482,10 @@
         <div class="row" data-aos="fade-in">
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>St Peters, Missouri, United States</p>
-              </div>
-
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>puspharajpandey@gmail.com</p>
+                <p>puspand@siue.edu</p>
               </div>
 
               <div class="phone">
@@ -453,6 +538,14 @@
     
     function openTranscript() {
       window.open("resume/assets/resume/Transcript.pdf");
+    }
+    
+    function openExperienceLetter(company) {
+      if (company === 'cedar') {
+        window.open("resume/assets/resume/cedar gate experience leter.pdf");
+      } else if (company === 'dekods') {
+        window.open("resume/assets/resume/Dekods Experience Letter.pdf");
+      }
     }
   </script>
 
