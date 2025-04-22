@@ -144,6 +144,7 @@
   /**
    * Skills animation
    */
+  /*
   let skilsContent = select('.skills-content');
   if (skilsContent) {
     new Waypoint({
@@ -157,6 +158,10 @@
       }
     })
   }
+  */
+
+  // New Skills Cards Animation (works without JavaScript)
+  // The animation is now handled by CSS and AOS library
 
   /**
    * Porfolio isotope and filter
