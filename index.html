@@ -515,6 +515,20 @@
 
   <!-- Scripts -->
   <script>
+    // Wait for DOM content to be loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS with a small delay
+      setTimeout(function() {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false,
+          disable: 'mobile'
+        });
+      }, 500);
+    });
+    
     function darkMode() {
       var element = document.body;
       element.classList.toggle("dark-mode");

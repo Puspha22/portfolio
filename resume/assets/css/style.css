@@ -554,10 +554,14 @@ section {
   justify-content: center;
   padding: 15px 10px;
   border-radius: 8px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
   text-align: center;
   min-height: 100px;
+  /* Fallback background color in case gradient doesn't work */
+  background-color: rgba(240, 240, 240, 0.5);
 }
 
 .skill-card i {
@@ -571,6 +575,8 @@ section {
 
 .skill-card.advanced {
   background: linear-gradient(135deg, rgba(20, 157, 221, 0.1), rgba(20, 157, 221, 0.3));
+  background: -webkit-linear-gradient(135deg, rgba(20, 157, 221, 0.1), rgba(20, 157, 221, 0.3));
+  background: -moz-linear-gradient(135deg, rgba(20, 157, 221, 0.1), rgba(20, 157, 221, 0.3));
   color: #173b6c;
 }
 
@@ -580,6 +586,8 @@ section {
 
 .skill-card.intermediate {
   background: linear-gradient(135deg, rgba(44, 187, 132, 0.1), rgba(44, 187, 132, 0.3));
+  background: -webkit-linear-gradient(135deg, rgba(44, 187, 132, 0.1), rgba(44, 187, 132, 0.3));
+  background: -moz-linear-gradient(135deg, rgba(44, 187, 132, 0.1), rgba(44, 187, 132, 0.3));
   color: #173b6c;
 }
 
@@ -589,6 +597,8 @@ section {
 
 .skill-card.basic {
   background: linear-gradient(135deg, rgba(240, 180, 41, 0.1), rgba(240, 180, 41, 0.3));
+  background: -webkit-linear-gradient(135deg, rgba(240, 180, 41, 0.1), rgba(240, 180, 41, 0.3));
+  background: -moz-linear-gradient(135deg, rgba(240, 180, 41, 0.1), rgba(240, 180, 41, 0.3));
   color: #173b6c;
 }
 
@@ -598,6 +608,8 @@ section {
 
 .skill-card:hover {
   transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
