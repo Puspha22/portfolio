@@ -50,6 +50,7 @@ h6 {
   height: 40px;
   border-radius: 50px;
   transition: all 0.4s;
+  overflow: hidden;
 }
 
 .back-to-top i {
@@ -66,6 +67,22 @@ h6 {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+}
+
+.back-to-top:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: -100%;
+  left: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover:after {
+  top: 0;
 }
 
 .scroll-down{
@@ -200,6 +217,8 @@ h6 {
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .nav-menu a i,
@@ -207,6 +226,22 @@ h6 {
   font-size: 24px;
   padding-right: 8px;
   color: #6f7180;
+}
+
+.nav-menu a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #149ddd;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover:before, 
+.nav-menu .active:before {
+  width: 30px;
 }
 
 .nav-menu a:hover,
@@ -290,12 +325,15 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
+  animation: fadeInDown 1s ease;
 }
 
 #hero p {
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+  animation: fadeInUp 1s ease 0.3s;
+  animation-fill-mode: both;
 }
 
 #hero p span {
@@ -323,6 +361,28 @@ h6 {
   }
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -345,6 +405,8 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: #497eca;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
 .section-title h2::after {
@@ -358,6 +420,11 @@ section {
   left: 0;
 }
 
+.section-title h2:hover:after {
+  width: 100px;
+  background: #2eafec;
+}
+
 .section-title p {
   margin-bottom: 0;
 }
@@ -365,6 +432,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .content {
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .about .content p {
   margin-bottom: 15px;
   line-height: 1.7;
@@ -380,6 +454,24 @@ section {
   font-weight: 700;
   font-size: 26px;
   color: #173b6c;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.about .content h3:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: #149ddd;
+  bottom: -8px;
+  left: 0;
+  transition: width 0.4s ease;
+}
+
+.about .content:hover h3:after {
+  width: 100%;
 }
 
 .about .content ul {
@@ -543,8 +635,8 @@ section {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
 }
 
 .skill-card {
@@ -552,25 +644,25 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px 10px;
+  padding: 10px 5px;
   border-radius: 8px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
   text-align: center;
-  min-height: 100px;
-  /* Fallback background color in case gradient doesn't work */
+  min-height: 90px;
   background-color: rgba(240, 240, 240, 0.5);
 }
 
 .skill-card i {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 8px;
 }
 
 .skill-card span {
   font-weight: 500;
+  font-size: 13px;
 }
 
 .skill-card.advanced {
@@ -627,21 +719,29 @@ section {
 
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
   }
   
   .skill-card {
-    padding: 12px 8px;
-    min-height: 90px;
+    padding: 8px 5px;
+    min-height: 80px;
   }
   
   .skill-card i {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 5px;
   }
   
   .skill-card span {
-    font-size: 14px;
+    font-size: 12px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -686,6 +786,16 @@ section {
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover {
+  transform: translateX(5px);
+}
+
+.resume .resume-item:hover::before {
+  background: #149ddd;
+  border-color: #ffffff;
 }
 
 .resume .resume-item h4 {
@@ -696,6 +806,11 @@ section {
   font-family: "Poppins", sans-serif;
   color: #050d18;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover h4 {
+  color: #149ddd;
 }
 
 .resume .resume-item h5 {
@@ -799,19 +914,24 @@ section {
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 10px 15px 8px 15px;
+  padding: 8px 15px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
   /* color: #272829; */
-  margin-bottom: 5px;
+  margin: 0 5px 10px;
   transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
+  background: rgba(20, 157, 221, 0.1);
   color: #149ddd;
+  border-color: #149ddd;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -819,9 +939,11 @@ section {
 }
 
 .portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
   overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
   z-index: 1;
 }
 
@@ -872,12 +994,21 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 1;
+  opacity: 0.9;
+  animation: pulse 1.5s infinite;
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: all 0.5s ease;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
@@ -1107,6 +1238,13 @@ section {
   /* background: #fff; */
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact .info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .contact .info i {
@@ -1120,7 +1258,13 @@ section {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.contact .info:hover i {
+  background: #149ddd;
+  color: #fff;
+  transform: rotate(360deg);
 }
 
 .contact .info h4 {
@@ -1793,11 +1937,30 @@ p.morning {
   cursor: pointer;
   border-radius: 12px;
   border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .resdown:hover {
   background-color: #181719;
   color: white;
+}
+
+.resdown:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(255,255,255,0.1);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.resdown:hover:after {
+  height: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1888,11 +2051,16 @@ p.morning {
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  position: relative;
+  border-left: 3px solid transparent;
+  height: 100%; /* Make all cards same height */
+  display: flex;
+  flex-direction: column;
 }
 
 .certification-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  border-left: 3px solid #149ddd;
+  transform: translateY(-5px) translateX(3px);
 }
 
 .certification-item h4 {
@@ -1900,6 +2068,11 @@ p.morning {
   margin-bottom: 10px;
   color: #173b6c;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.certification-item:hover h4 {
+  color: #149ddd;
 }
 
 .certification-item i {
@@ -2011,5 +2184,40 @@ p.morning {
   left: 0;
   top: 4px;
   color: #149ddd;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Add spacing between certification rows */
+#certifications .row {
+  margin-bottom: 15px;
+}
+
+/* Center the last certification if it's alone in a row */
+#certifications .mx-auto .certification-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustments for certification grid */
+@media (max-width: 767px) {
+  .certification-item {
+    margin-bottom: 20px;
+  }
+  
+  #certifications .mx-auto {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
