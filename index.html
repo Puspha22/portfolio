@@ -5,9 +5,63 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Puspha Raj Pandeya</title>
+  <title>Puspha Raj Pandeya - Data Engineer & Machine Learning Engineer</title>
   <meta content="Portfolio website of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer" name="description">
   <meta content="portfolio, data engineering, machine learning, python, data science" name="keywords">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.puspharaj.com.np/">
+  <meta property="og:title" content="Puspha Raj Pandeya - Data Engineer & Machine Learning Engineer">
+  <meta property="og:description" content="Portfolio website of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer with expertise in data pipelines, ETL processes, and machine learning models.">
+  <meta property="og:image" content="https://www.puspharaj.com.np/resume/assets/img/g2.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.puspharaj.com.np/">
+  <meta property="twitter:title" content="Puspha Raj Pandeya - Data Engineer & Machine Learning Engineer">
+  <meta property="twitter:description" content="Portfolio website of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer with expertise in data pipelines, ETL processes, and machine learning models.">
+  <meta property="twitter:image" content="https://www.puspharaj.com.np/resume/assets/img/g2.jpg">
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="Puspha Raj Pandeya">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="generator" content="HTML5">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Puspha Raj Pandeya",
+    "url": "https://www.puspharaj.com.np",
+    "image": "https://www.puspharaj.com.np/resume/assets/img/g2.jpg",
+    "sameAs": [
+      "https://github.com/Puspha22",
+      "https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/"
+    ],
+    "jobTitle": "Data Engineer & Machine Learning Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Southern Illinois University Edwardsville"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Nepal College of Information Technology"
+    },
+    "knowsAbout": [
+      "Data Engineering",
+      "Machine Learning",
+      "Python",
+      "SQL",
+      "ETL",
+      "Data Analysis"
+    ],
+    "description": "Data Engineer and Machine Learning Engineer with expertise in developing data pipelines, ETL processes, and machine learning models to solve complex business problems."
+  }
+  </script>
 
   <!-- Favicons -->
   <link href="resume/assets/img/b2.jpg" rel="icon">
@@ -26,42 +80,259 @@
 
   <!-- Template Main CSS File -->
   <link href="resume/assets/css/style.css" rel="stylesheet">
+
+  <!-- Skip Navigation Styles -->
+  <style>
+    .skip-nav {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #149ddd;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    .skip-nav:focus {
+      top: 0;
+    }
+
+    /* Dark mode styles */
+    .dark-mode .resume-item h4.highlight-blue {
+      color: #149ddd !important;
+    }
+    
+    .dark-mode .resume-item h4:not(.highlight-blue) {
+      color: #fff !important;
+    }
+
+    /* Section titles in dark mode */
+    .dark-mode .resume-title,
+    .dark-mode .section-title h2 {
+      color: #149ddd !important;
+    }
+
+    /* Certificate titles in dark mode */
+    .dark-mode .certification-item h4 {
+      color: #149ddd !important;
+    }
+
+    /* Skills section background in dark mode */
+    .dark-mode .skills-container {
+      background-color: initial !important;
+    }
+
+    /* Skill category boxes in dark mode */
+    .dark-mode .skills-category {
+      background-color: #1a1a1a !important;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Category headers in dark mode */
+    .dark-mode .category-header h3 {
+      color: #149ddd !important;
+    }
+
+    /* Contact details in dark mode */
+    .dark-mode .info h4 {
+      color: #149ddd !important;
+    }
+
+    .dark-mode .info p,
+    .dark-mode .info a {
+      color: #fff !important;
+    }
+
+    /* Skill level backgrounds in dark mode */
+    .dark-mode .skill-card.advanced {
+      background-color: #133a4c !important;
+    }
+    .dark-mode .skill-card.intermediate {
+      background-color: #1d4d3a !important;
+    }
+    .dark-mode .skill-card.basic {
+      background-color: #4d4421 !important;
+    }
+    /* Brighten text in skill cards in dark mode */
+    .dark-mode .skill-card span,
+    .dark-mode .skill-card i {
+      color: #fff !important;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+
+    /* Skill level legend backgrounds in dark mode */
+    .dark-mode .skills-legend {
+      background-color: #1a1a1a !important;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .dark-mode .legend-item {
+      background-color: transparent !important;
+    }
+
+    /* --- Global Font Colors --- */
+    body {
+      color: #222;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #111;
+    }
+    a {
+      color: #149ddd;
+    }
+    a:hover, a:focus {
+      color: #0d6efd;
+    }
+    .section-title p,
+    .resume-item p,
+    .about-bullets li,
+    .skills-legend span,
+    .legend-item span,
+    .info p,
+    .info a {
+      color: #444;
+    }
+    .muted, .text-muted {
+      color: #888 !important;
+    }
+
+    /* --- Dark Mode Font Colors --- */
+    .dark-mode body {
+      color: #e0e0e0;
+    }
+    .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+      color: #fff;
+    }
+    .dark-mode a {
+      color: #149ddd;
+    }
+    .dark-mode a:hover, .dark-mode a:focus {
+      color: #66c2ff;
+    }
+    .dark-mode .section-title p,
+    .dark-mode .resume-item p,
+    .dark-mode .about-bullets li,
+    .dark-mode .skills-legend span,
+    .dark-mode .legend-item span,
+    .dark-mode .info p,
+    .dark-mode .info a {
+      color: #ccc;
+    }
+    .dark-mode .muted, .dark-mode .text-muted {
+      color: #aaa !important;
+    }
+
+    /* --- Certificates Grid Card Layout --- */
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .certificate-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s, transform 0.2s;
+      min-height: 170px;
+    }
+    .certificate-card:hover {
+      box-shadow: 0 4px 16px rgba(20,157,221,0.15);
+      transform: translateY(-4px) scale(1.02);
+    }
+    .certificate-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #149ddd;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .certificate-card .issuer {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 0.7rem;
+    }
+    .certificate-card a {
+      margin-top: auto;
+      color: #149ddd;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid #149ddd;
+      border-radius: 6px;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.95rem;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .certificate-card a:hover {
+      background: #149ddd;
+      color: #fff;
+    }
+    /* Dark mode for certificate cards */
+    .dark-mode .certificate-card {
+      background: #181c20;
+      box-shadow: 0 2px 8px rgba(20,157,221,0.08);
+    }
+    .dark-mode .certificate-card h4 {
+      color: #66c2ff;
+    }
+    .dark-mode .certificate-card .issuer {
+      color: #bbb;
+    }
+    .dark-mode .certificate-card a {
+      color: #66c2ff;
+      border-color: #66c2ff;
+    }
+    .dark-mode .certificate-card a:hover {
+      background: #66c2ff;
+      color: #181c20;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Skip Navigation -->
+  <a href="#main" class="skip-nav">Skip to main content</a>
+
   <!-- Mobile nav toggle button -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <i class="bi bi-list mobile-nav-toggle d-xl-none" role="button" aria-label="Toggle navigation menu" tabindex="0"></i>
 
   <!-- Header -->
   <header id="header">
     <div class="d-flex flex-column">
       <div class="profile">
-        <img src="resume/assets/img/g2.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+        <img src="resume/assets/img/g2.jpg" alt="Puspha Raj Pandeya's profile picture" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Puspha Raj Pandeya</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://github.com/Puspha22" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-          <a href="mailto:puspharajpandey@gmail.com" class="gmail" title="Email"><i class="bx bxl-gmail"></i></a>           
+          <a href="https://github.com/Puspha22" class="github" title="GitHub" aria-label="Visit my GitHub profile"><i class="bx bxl-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/" class="linkedin" title="LinkedIn" aria-label="Visit my LinkedIn profile"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:puspharajpandey@gmail.com" class="gmail" title="Email" aria-label="Send me an email"><i class="bx bxl-gmail" aria-hidden="true"></i></a>           
         </div>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar">
+      <nav id="navbar" class="nav-menu navbar" role="navigation" aria-label="Main navigation">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-server"></i><span>Projects</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i><span>Skills</span></a></li>
-          <li><a href="#certifications" class="nav-link scrollto"><i class="bx bx-award"></i><span>Certifications</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#hero" class="nav-link scrollto active" aria-current="page"><i class="bx bx-home" aria-hidden="true"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user" aria-hidden="true"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank" aria-hidden="true"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-server" aria-hidden="true"></i><span>Projects</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server" aria-hidden="true"></i><span>Skills</span></a></li>
+          <li><a href="#certifications" class="nav-link scrollto"><i class="bx bx-award" aria-hidden="true"></i><span>Certifications</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope" aria-hidden="true"></i> <span>Contact</span></a></li>
         </ul>
       </nav>
     </div>
 
     <!-- Dark Mode Toggle -->
     <div class="wrapper">
-      <input type="checkbox" id="hide-checkbox" onclick="darkMode()">
-      <label for="hide-checkbox" class="toggle">
+      <input type="checkbox" id="hide-checkbox" onclick="darkMode()" aria-label="Toggle dark mode">
+      <label for="hide-checkbox" class="toggle" aria-hidden="true">
         <span class="toggle-button">
           <span class="crater crater-1"></span>
           <span class="crater crater-2"></span>
@@ -87,7 +358,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Puspha Raj Pandeya</h1>
-      <p>I'm <span class="typed" data-typed-items="a Data Engineer., a Machine Learning Engineer."></span></p>
+      <p>I'm <span class="typed" data-typed-items="a Data Engineer., a Machine Learning Engineer." aria-label="I am a Data Engineer and Machine Learning Engineer"></span></p>
     </div>
   </section>
 
@@ -102,7 +373,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-            <img src="resume/assets/img/b2.jpg" class="img-fluid" alt="Profile Image">
+            <img src="resume/assets/img/b2.jpg" class="img-fluid" alt="Puspha Raj Pandeya's professional photo">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="200">
             <h3>Data Engineer &amp; Machine Learning Engineer</h3>
@@ -120,8 +391,8 @@
             </ul>
             
             <div class="about-buttons">
-              <a href="mailto:puspharajpandey@gmail.com" class="resdown">Email me</a>
-              <button class="resdown" onclick="resumes()">Download resume</button>
+              <a href="mailto:puspharajpandey@gmail.com" class="resdown" aria-label="Send me an email">Email me</a>
+              <button class="resdown" onclick="resumes()" aria-label="Download my resume">Download resume</button>
             </div>
           </div>
         </div>
@@ -214,42 +485,42 @@
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-data">Data Engineering</li>
-              <li data-filter=".filter-ml">Machine Learning</li>
-              <li data-filter=".filter-web">Web Development</li>
+            <ul id="portfolio-flters" role="tablist" aria-label="Project filters">
+              <li data-filter="*" class="filter-active" role="tab" aria-selected="true">All</li>
+              <li data-filter=".filter-data" role="tab" aria-selected="false">Data Engineering</li>
+              <li data-filter=".filter-ml" role="tab" aria-selected="false">Machine Learning</li>
+              <li data-filter=".filter-web" role="tab" aria-selected="false">Web Development</li>
             </ul>
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100" role="tabpanel">
           <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
             <div class="portfolio-wrap">
-              <img src="resume/assets/img/portfolio/sentiment.jpg" class="img-fluid" alt="Sentiment Analysis Project">
+              <img src="resume/assets/img/portfolio/sentiment.jpg" class="img-fluid" alt="Sentiment Analysis Project - Analyzing business reviews using NLP">
               <div class="portfolio-links">
-                <a href="resume/assets/img/portfolio/sentiment.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sentiment Analysis for Business Reviews"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/Puspha22/Sentiment-analysis-for-business-reviews" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="resume/assets/img/portfolio/sentiment.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sentiment Analysis for Business Reviews" aria-label="View larger image of Sentiment Analysis Project"><i class="bx bx-plus" aria-hidden="true"></i></a>
+                <a href="https://github.com/Puspha22/Sentiment-analysis-for-business-reviews" target="_blank" title="More Details" aria-label="View Sentiment Analysis Project on GitHub"><i class="bx bx-link" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
             <div class="portfolio-wrap">
-              <img src="resume/assets/img/portfolio/brain-tumor.jpg" class="img-fluid" alt="Brain Tumor Segmentation">
+              <img src="resume/assets/img/portfolio/brain-tumor.jpg" class="img-fluid" alt="Brain Tumor Segmentation Project - Medical image analysis using deep learning">
               <div class="portfolio-links">
-                <a href="resume/assets/img/portfolio/brain-tumor.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Brain Tumor Segmentation"><i class="bx bx-plus"></i></a>
-                <a href="https://drive.google.com/drive/folders/1fI3Z3xtry1331siVgtHt477acA2N5_AR?usp=sharing" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="resume/assets/img/portfolio/brain-tumor.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Brain Tumor Segmentation" aria-label="View larger image of Brain Tumor Segmentation Project"><i class="bx bx-plus" aria-hidden="true"></i></a>
+                <a href="https://drive.google.com/drive/folders/1fI3Z3xtry1331siVgtHt477acA2N5_AR?usp=sharing" target="_blank" title="More Details" aria-label="View Brain Tumor Segmentation Project details"><i class="bx bx-link" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
             <div class="portfolio-wrap">
-              <img src="resume/assets/img/portfolio/heart-disease.jpg" class="img-fluid" alt="Cardiovascular Disease Detection">
+              <img src="resume/assets/img/portfolio/heart-disease.jpg" class="img-fluid" alt="Cardiovascular Disease Detection Project - Machine learning model for heart disease prediction">
               <div class="portfolio-links">
-                <a href="resume/assets/img/portfolio/heart-disease.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cardiovascular Disease Detection"><i class="bx bx-plus"></i></a>
-                <a href="https://github.com/Puspha22/HeartDiseaseDetection" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="resume/assets/img/portfolio/heart-disease.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cardiovascular Disease Detection" aria-label="View larger image of Cardiovascular Disease Detection Project"><i class="bx bx-plus" aria-hidden="true"></i></a>
+                <a href="https://github.com/Puspha22/HeartDiseaseDetection" target="_blank" title="More Details" aria-label="View Cardiovascular Disease Detection Project on GitHub"><i class="bx bx-link" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
@@ -266,17 +537,17 @@
         </div>
         
         <!-- Skills Legend -->
-        <div class="skills-legend">
+        <div class="skills-legend" role="legend" aria-label="Skill level indicators">
           <div class="legend-item">
-            <div class="legend-color advanced"></div>
+            <div class="legend-color advanced" aria-label="Advanced skill level"></div>
             <span>Advanced</span>
           </div>
           <div class="legend-item">
-            <div class="legend-color intermediate"></div>
+            <div class="legend-color intermediate" aria-label="Intermediate skill level"></div>
             <span>Intermediate</span>
           </div>
           <div class="legend-item">
-            <div class="legend-color basic"></div>
+            <div class="legend-color basic" aria-label="Basic skill level"></div>
             <span>Basic</span>
           </div>
         </div>
@@ -285,53 +556,53 @@
           <!-- Software Development -->
           <div class="skills-category" data-aos="fade-up">
             <div class="category-header">
-              <i class="bx bx-code-alt"></i>
+              <i class="bx bx-code-alt" aria-hidden="true"></i>
               <h3>Software Development</h3>
             </div>
-            <div class="skills-grid">
+            <div class="skills-grid" role="list" aria-label="Software Development Skills">
               <!-- Advanced (Blue) -->
-              <div class="skill-card advanced">
-                <i class="bx bxl-python"></i>
+              <div class="skill-card advanced" role="listitem" aria-label="Python - Advanced">
+                <i class="bx bxl-python" aria-hidden="true"></i>
                 <span>Python</span>
               </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-data"></i>
+              <div class="skill-card advanced" role="listitem" aria-label="Pandas - Advanced">
+                <i class="bx bx-data" aria-hidden="true"></i>
                 <span>Pandas</span>
               </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-table"></i>
+              <div class="skill-card advanced" role="listitem" aria-label="SQL - Advanced">
+                <i class="bx bx-table" aria-hidden="true"></i>
                 <span>SQL</span>
               </div>
-              <div class="skill-card advanced">
-                <i class="bx bxl-git"></i>
+              <div class="skill-card advanced" role="listitem" aria-label="Git - Advanced">
+                <i class="bx bxl-git" aria-hidden="true"></i>
                 <span>Git</span>
               </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-server"></i>
+              <div class="skill-card advanced" role="listitem" aria-label="Flask - Advanced">
+                <i class="bx bx-server" aria-hidden="true"></i>
                 <span>Flask</span>
               </div>
               
               <!-- Intermediate (Green) -->
-              <div class="skill-card intermediate">
-                <i class="bx bx-cube-alt"></i>
+              <div class="skill-card intermediate" role="listitem" aria-label="MongoDB - Intermediate">
+                <i class="bx bx-cube-alt" aria-hidden="true"></i>
                 <span>MongoDB</span>
               </div>
-              <div class="skill-card intermediate">
-                <i class="bx bxl-docker"></i>
+              <div class="skill-card intermediate" role="listitem" aria-label="Docker - Intermediate">
+                <i class="bx bxl-docker" aria-hidden="true"></i>
                 <span>Docker</span>
               </div>
-              <div class="skill-card intermediate">
-                <i class="bx bx-bolt-circle"></i>
+              <div class="skill-card intermediate" role="listitem" aria-label="FastAPI - Intermediate">
+                <i class="bx bx-bolt-circle" aria-hidden="true"></i>
                 <span>FastAPI</span>
               </div>
               
               <!-- Basic (Yellow) -->
-              <div class="skill-card basic">
-                <i class="bx bxl-html5"></i>
+              <div class="skill-card basic" role="listitem" aria-label="HTML - Basic">
+                <i class="bx bxl-html5" aria-hidden="true"></i>
                 <span>HTML</span>
               </div>
-              <div class="skill-card basic">
-                <i class="bx bxl-css3"></i>
+              <div class="skill-card basic" role="listitem" aria-label="CSS - Basic">
+                <i class="bx bxl-css3" aria-hidden="true"></i>
                 <span>CSS</span>
               </div>
             </div>
@@ -432,51 +703,31 @@
           <p>Professional certifications that validate my technical expertise and knowledge in various domains.</p>
         </div>
 
-        <div class="row">
-          <!-- First row -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="certification-item">
-              <h4><i class="bi bi-award-fill"></i> AWS Academy Graduate - AWS Academy Data Analytics</h4>
-              <p><a href="https://www.credly.com/badges/9b876ed2-a784-4f10-bf6b-fcf7f80c0d45/public_url" target="_blank">View Certificate</a></p>
-              <ul>
-                <li>Cloud data analytics and processing technologies</li>
-                <li>AWS data services including S3, Redshift, and Athena</li>
-              </ul>
-            </div>
+        <div class="certificates-grid">
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
+            <h4><i class="bi bi-award-fill" aria-hidden="true"></i> AWS Academy Graduate - AWS Academy Data Analytics</h4>
+            <div class="issuer">AWS Academy</div>
+            <a href="https://www.credly.com/badges/9b876ed2-a784-4f10-bf6b-fcf7f80c0d45/public_url" target="_blank" rel="noopener" aria-label="View AWS Academy Data Analytics certificate">View Certificate</a>
           </div>
-          
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="certification-item">
-              <h4><i class="bi bi-award-fill"></i> Python for Everybody Specialization (Coursera)</h4>
-              <p><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/JQ6J7FTSDAG6" target="_blank">View Certificate</a></p>
-              <ul>
-                <li>Comprehensive Python programming fundamentals</li>
-                <li>Data structures, web data, and databases</li>
-              </ul>
-            </div>
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+            <h4><i class="bi bi-award-fill" aria-hidden="true"></i> Python for Everybody Specialization</h4>
+            <div class="issuer">Coursera</div>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/JQ6J7FTSDAG6" target="_blank" rel="noopener" aria-label="View Python for Everybody Specialization certificate">View Certificate</a>
           </div>
-          
-          <!-- Second row -->
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="certification-item">
-              <h4><i class="bi bi-award-fill"></i> Capstone: Retrieving, Processing, and Visualizing Data with Python</h4>
-              <p><a href="https://www.coursera.org/account/accomplishments/certificate/JR4BG6DB9YEF" target="_blank">View Certificate</a></p>
-            </div>
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="300">
+            <h4><i class="bi bi-award-fill" aria-hidden="true"></i> Capstone: Retrieving, Processing, and Visualizing Data with Python</h4>
+            <div class="issuer">Coursera</div>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/JR4BG6DB9YEF" target="_blank" rel="noopener" aria-label="View Capstone certificate">View Certificate</a>
           </div>
-          
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="certification-item">
-              <h4><i class="bi bi-award-fill"></i> Python Data Structures (Coursera)</h4>
-              <p><a href="https://www.coursera.org/account/accomplishments/certificate/JR4BG6DB9YEF" target="_blank">View Certificate</a></p>
-            </div>
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="400">
+            <h4><i class="bi bi-award-fill" aria-hidden="true"></i> Python Data Structures</h4>
+            <div class="issuer">Coursera</div>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/JR4BG6DB9YEF" target="_blank" rel="noopener" aria-label="View Python Data Structures certificate">View Certificate</a>
           </div>
-          
-          <!-- Third row -->
-          <div class="col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="500">
-            <div class="certification-item">
-              <h4><i class="bi bi-award-fill"></i> Using Databases with Python (Coursera)</h4>
-              <p><a href="https://www.coursera.org/account/accomplishments/certificate/7WKJYBSVA7YJ" target="_blank">View Certificate</a></p>
-            </div>
+          <div class="certificate-card" data-aos="fade-up" data-aos-delay="500">
+            <h4><i class="bi bi-award-fill" aria-hidden="true"></i> Using Databases with Python</h4>
+            <div class="issuer">Coursera</div>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/7WKJYBSVA7YJ" target="_blank" rel="noopener" aria-label="View Using Databases with Python certificate">View Certificate</a>
           </div>
         </div>
       </div>
@@ -494,15 +745,15 @@
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="email">
-                <i class="bi bi-envelope"></i>
+                <i class="bi bi-envelope" aria-hidden="true"></i>
                 <h4>Email:</h4>
-                <p>puspand@siue.edu</p>
+                <p><a href="mailto:puspand@siue.edu" aria-label="Send email to puspand@siue.edu">puspand@siue.edu</a></p>
               </div>
 
               <div class="phone">
-                <i class="bi bi-phone"></i>
+                <i class="bi bi-phone" aria-hidden="true"></i>
                 <h4>Call:</h4>
-                <p>(636) 378-8382</p>
+                <p><a href="tel:+16363788382" aria-label="Call (636) 378-8382">(636) 378-8382</a></p>
               </div>
             </div>
           </div>
@@ -513,16 +764,16 @@
 
   <!-- Footer -->
   <footer id="footer">
-    <a href="mailto:puspharajpandey@gmail.com" class="email-link active"><i class="bx bxl-gmail"></i> <span>&nbsp;Email me</span></a>
+    <a href="mailto:puspharajpandey@gmail.com" class="email-link active" aria-label="Send email to puspharajpandey@gmail.com"><i class="bx bxl-gmail" aria-hidden="true"></i> <span>&nbsp;Email me</span></a>
     
     <div class="container">
       <div class="copyright">
-        <button class="resdown" onclick="resumes()">Download resume</button>
+        <button class="resdown" onclick="resumes()" aria-label="Download my resume">Download resume</button>
       </div>
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
   <!-- Scripts -->
   <script>
@@ -538,6 +789,17 @@
           disable: 'mobile'
         });
       }, 500);
+
+      // Add keyboard navigation for portfolio filters
+      const filters = document.querySelectorAll('#portfolio-flters li');
+      filters.forEach(filter => {
+        filter.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            filter.click();
+          }
+        });
+      });
     });
     
     function darkMode() {

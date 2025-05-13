@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.puspharaj.com.np/sitemap.xml
+
+# Disallow access to private files
+Disallow: /resume/assets/resume/
+Disallow: /resume/assets/vendor/ 
