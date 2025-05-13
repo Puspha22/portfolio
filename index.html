@@ -293,6 +293,36 @@
       background: #66c2ff;
       color: #181c20;
     }
+
+    /* Dark mode styles for Email Me and Download Resume buttons */
+    .dark-mode .about-buttons .resdown {
+      background: #7c3aed !important;
+      color: #fff !important;
+      border: 1px solid #7c3aed !important;
+    }
+    .dark-mode .about-buttons .resdown:hover {
+      background: #5b21b6 !important;
+      border-color: #5b21b6 !important;
+      color: #fff !important;
+    }
+
+    /* Contact section spacing improvements */
+    .contact .info > div {
+      margin-bottom: 1.2rem;
+    }
+    .contact .info > div:last-child {
+      margin-bottom: 0;
+    }
+    .contact .info .email h4 {
+      margin-bottom: 0.4rem;
+    }
+    .contact .info .email p {
+      margin-bottom: 0.2rem;
+      line-height: 1.5;
+    }
+    .contact .info .email p:last-child {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 
@@ -422,16 +452,6 @@
               <p>GPA: 3.03</p>
               <p><a href="#" onclick="openTranscript()" class="transcript-link"><i class="bi bi-file-earmark-text"></i> Transcript</a></p>
             </div>
-            
-            <h3 class="resume-title">Contact Details</h3>
-            <div class="resume-item pb-0">
-              <ul>
-                <li><i class="bi bi-geo-alt"></i> St Peters, Missouri</li>
-                <li><i class="bi bi-phone"></i> (636) 378-8382</li>
-                <li><i class="bi bi-envelope"></i> puspharajpandey@gmail.com</li>
-                <li><i class="bi bi-globe"></i> www.puspharaj.com.np</li>
-              </ul>
-            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
@@ -480,51 +500,8 @@
       <div class="container">
         <div class="section-title">
           <h2>Projects</h2>
-          <p>Below are some of the key projects I have worked on throughout my career.</p>
         </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters" role="tablist" aria-label="Project filters">
-              <li data-filter="*" class="filter-active" role="tab" aria-selected="true">All</li>
-              <li data-filter=".filter-data" role="tab" aria-selected="false">Data Engineering</li>
-              <li data-filter=".filter-ml" role="tab" aria-selected="false">Machine Learning</li>
-              <li data-filter=".filter-web" role="tab" aria-selected="false">Web Development</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100" role="tabpanel">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
-            <div class="portfolio-wrap">
-              <img src="resume/assets/img/portfolio/sentiment.jpg" class="img-fluid" alt="Sentiment Analysis Project - Analyzing business reviews using NLP">
-              <div class="portfolio-links">
-                <a href="resume/assets/img/portfolio/sentiment.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sentiment Analysis for Business Reviews" aria-label="View larger image of Sentiment Analysis Project"><i class="bx bx-plus" aria-hidden="true"></i></a>
-                <a href="https://github.com/Puspha22/Sentiment-analysis-for-business-reviews" target="_blank" title="More Details" aria-label="View Sentiment Analysis Project on GitHub"><i class="bx bx-link" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
-            <div class="portfolio-wrap">
-              <img src="resume/assets/img/portfolio/brain-tumor.jpg" class="img-fluid" alt="Brain Tumor Segmentation Project - Medical image analysis using deep learning">
-              <div class="portfolio-links">
-                <a href="resume/assets/img/portfolio/brain-tumor.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Brain Tumor Segmentation" aria-label="View larger image of Brain Tumor Segmentation Project"><i class="bx bx-plus" aria-hidden="true"></i></a>
-                <a href="https://drive.google.com/drive/folders/1fI3Z3xtry1331siVgtHt477acA2N5_AR?usp=sharing" target="_blank" title="More Details" aria-label="View Brain Tumor Segmentation Project details"><i class="bx bx-link" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ml">
-            <div class="portfolio-wrap">
-              <img src="resume/assets/img/portfolio/heart-disease.jpg" class="img-fluid" alt="Cardiovascular Disease Detection Project - Machine learning model for heart disease prediction">
-              <div class="portfolio-links">
-                <a href="resume/assets/img/portfolio/heart-disease.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cardiovascular Disease Detection" aria-label="View larger image of Cardiovascular Disease Detection Project"><i class="bx bx-plus" aria-hidden="true"></i></a>
-                <a href="https://github.com/Puspha22/HeartDiseaseDetection" target="_blank" title="More Details" aria-label="View Cardiovascular Disease Detection Project on GitHub"><i class="bx bx-link" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p style="background:#149ddd;color:#fff;font-weight:600;padding:1rem 1.5rem;border-radius:8px;text-align:center;max-width:500px;margin:2rem auto 1rem auto;font-size:1.15rem;box-shadow:0 2px 8px rgba(20,157,221,0.10);">Projects section is currently under development. More coming soon!</p>
       </div>
     </section>
 
@@ -747,13 +724,18 @@
               <div class="email">
                 <i class="bi bi-envelope" aria-hidden="true"></i>
                 <h4>Email:</h4>
-                <p><a href="mailto:puspand@siue.edu" aria-label="Send email to puspand@siue.edu">puspand@siue.edu</a></p>
+                <p style="margin-bottom:0.2rem;"><a href="mailto:puspand@siue.edu" aria-label="Send email to puspand@siue.edu">puspand@siue.edu</a></p>
+                <p style="margin-bottom:0;"><a href="mailto:puspharajpandey@gmail.com" aria-label="Send email to puspharajpandey@gmail.com">puspharajpandey@gmail.com</a></p>
               </div>
-
               <div class="phone">
                 <i class="bi bi-phone" aria-hidden="true"></i>
                 <h4>Call:</h4>
                 <p><a href="tel:+16363788382" aria-label="Call (636) 378-8382">(636) 378-8382</a></p>
+              </div>
+              <div class="address">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                <h4>Location:</h4>
+                <p>Saint Peters, Missouri, USA</p>
               </div>
             </div>
           </div>
@@ -764,9 +746,8 @@
 
   <!-- Footer -->
   <footer id="footer">
-    <a href="mailto:puspharajpandey@gmail.com" class="email-link active" aria-label="Send email to puspharajpandey@gmail.com"><i class="bx bxl-gmail" aria-hidden="true"></i> <span>&nbsp;Email me</span></a>
-    
     <div class="container">
+      <a href="mailto:puspharajpandey@gmail.com" class="email-link active" aria-label="Send email to puspharajpandey@gmail.com"><i class="bx bxl-gmail" aria-hidden="true"></i> <span>&nbsp;Email me</span></a>
       <div class="copyright">
         <button class="resdown" onclick="resumes()" aria-label="Download my resume">Download resume</button>
       </div>
