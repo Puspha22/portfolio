@@ -226,4 +226,13 @@
    */
   new PureCounter();
 
+  // Fade out scroll-down-btn on scroll
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 40) {
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+  });
+
 })()
