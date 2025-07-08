@@ -64,7 +64,7 @@
   </script>
 
   <!-- Favicons -->
-  <link href="resume/assets/img/b2.jpg" rel="icon">
+  <link href="resume/assets/img/pushpa-raj-crop-again.png" rel="icon">
   <link href="resume/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -322,6 +322,25 @@
     .contact .info .email p:last-child {
       margin-bottom: 0;
     }
+
+    /* Custom style for company links in experience section */
+    .company-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+    .company-link:hover, .company-link:active {
+      color: #149ddd;
+      text-decoration: underline;
+    }
+    .company-link:visited {
+      color: inherit;
+    }
+    .company-link:focus {
+      color: inherit;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -402,7 +421,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-            <img src="resume/assets/img/b2.jpg" class="img-fluid" alt="Puspha Raj Pandeya's professional photo">
+            <img src="resume/assets/img/pushpa-raj-crop-again.png" class="img-fluid" alt="Puspha Raj Pandeya's professional photo">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="200">
             <h3>Data Engineer &amp; Machine Learning Engineer</h3>
@@ -442,12 +461,12 @@
             <div class="resume-item">
               <h4 class="highlight-blue">Masters in Computer Science</h4>
               <h4>August, 2024 - Ongoing</h4>
-              <p><em>Southern Illinois University Edwardsville</em></p>
+              <p><em><a href="https://www.siue.edu/" target="_blank" rel="noopener" class="company-link">Southern Illinois University Edwardsville</a></em></p>
             </div>
             <div class="resume-item">
               <h4 class="highlight-blue">Bachelors in Computer Engineering</h4>
               <h4>September, 2017 - August, 2022</h4>
-              <p><em>Nepal College of Information Technology, Kathmandu, Nepal</em></p>
+              <p><em><a href="https://ncit.edu.np/" target="_blank" rel="noopener" class="company-link">Nepal College of Information Technology, Kathmandu, Nepal</a></em></p>
               <p>GPA: 3.03</p>
               <p><a href="#" onclick="openTranscript()" class="transcript-link"><i class="bi bi-file-earmark-text"></i> Transcript</a></p>
             </div>
@@ -457,7 +476,7 @@
             <div class="resume-item">
               <h4 class="highlight-blue">Data Engineer</h4>
               <h4>June 2023 - August 2024</h4>
-              <p><em>Cedar Gate Technologies</em> <a href="#" onclick="openExperienceLetter('cedar')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
+              <p><em><a href="https://www.cedargate.com/" target="_blank" rel="noopener" class="company-link">Cedar Gate Technologies</a></em> <a href="#" onclick="openExperienceLetter('cedar')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
               <ul>
                 <li>Analyzed US healthcare data to identify patient cost distributions and insurance claim legitimacy.</li>
                 <li>Cleaned, transformed, and mapped raw patient data to company-wide schema.</li>
@@ -468,7 +487,7 @@
             <div class="resume-item">
               <h4 class="highlight-blue">Freelance Data Analytics Consultant</h4>
               <h4>Project-based</h4>
-              <p><em>Dekods INC.</em> <a href="#" onclick="openExperienceLetter('dekods')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
+              <p><em><a href="https://dndts.net/" target="_blank" rel="noopener" class="company-link">Dekods INC.</a></em> <a href="#" onclick="openExperienceLetter('dekods')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
               <ul>
                 <li>Processed 100,000+ records for UNICEF rural infrastructure initiative in Nepal.</li>
                 <li>Performed exploratory data analysis using Pandas and Python.</li>
@@ -479,7 +498,7 @@
             <div class="resume-item">
               <h4 class="highlight-blue">Associate Machine Learning Engineer and Python Developer</h4>
               <h4>November 2021 - January 2023</h4>
-              <p><em>Eydean INC.</em></p>
+              <p><em><a href="https://eydean.com/" target="_blank" rel="noopener" class="company-link">Eydean INC.</a></em></p>
               <ul>
                 <li>Built sales forecasting models using ARIMA and SARIMA time series analysis.</li>
                 <li>Developed recommendation systems using cosine similarity and Non-negative matrix factorization techniques.</li>
