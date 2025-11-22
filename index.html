@@ -1,846 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer">
+    <title>Puspha Raj Pandeya | Data & ML Engineer</title>
 
-  <title>Puspha Raj Pandeya - Data Engineer & Machine Learning Engineer</title>
-  <meta content="Portfolio website of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer" name="description">
-  <meta content="portfolio, data engineering, machine learning, python, data science" name="keywords">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.puspharaj.com.np/">
-  <meta property="og:title" content="Puspha Raj Pandeya - Data Engineer & Machine Learning Engineer">
-  <meta property="og:description" content="Portfolio website of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer with expertise in data pipelines, ETL processes, and machine learning models.">
-  <meta property="og:image" content="https://www.puspharaj.com.np/resume/assets/img/g2.jpg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.puspharaj.com.np/">
-  <meta property="twitter:title" content="Puspha Raj Pandeya - Data Engineer & Machine Learning Engineer">
-  <meta property="twitter:description" content="Portfolio website of Puspha Raj Pandeya - Data Engineer and Machine Learning Engineer with expertise in data pipelines, ETL processes, and machine learning models.">
-  <meta property="twitter:image" content="https://www.puspharaj.com.np/resume/assets/img/g2.jpg">
-
-  <!-- Additional SEO Meta Tags -->
-  <meta name="author" content="Puspha Raj Pandeya">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  <meta name="revisit-after" content="7 days">
-  <meta name="generator" content="HTML5">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Puspha Raj Pandeya",
-    "url": "https://www.puspharaj.com.np",
-    "image": "https://www.puspharaj.com.np/resume/assets/img/g2.jpg",
-    "sameAs": [
-      "https://github.com/Puspha22",
-      "https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/"
-    ],
-    "jobTitle": "Data Engineer & Machine Learning Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Southern Illinois University Edwardsville"
-    },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Nepal College of Information Technology"
-    },
-    "knowsAbout": [
-      "Data Engineering",
-      "Machine Learning",
-      "Python",
-      "SQL",
-      "ETL",
-      "Data Analysis"
-    ],
-    "description": "Data Engineer and Machine Learning Engineer with expertise in developing data pipelines, ETL processes, and machine learning models to solve complex business problems."
-  }
-  </script>
-
-  <!-- Favicons -->
-  <link href="resume/assets/img/pushpa-raj-crop-again.png" rel="icon">
-  <link href="resume/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="resume/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="resume/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="resume/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="resume/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="resume/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="resume/assets/css/style.css" rel="stylesheet">
-
-  <!-- Skip Navigation Styles -->
-  <style>
-    .skip-nav {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #149ddd;
-      color: white;
-      padding: 8px;
-      z-index: 100;
-      transition: top 0.3s;
-    }
-    .skip-nav:focus {
-      top: 0;
-    }
-
-    /* Dark mode styles */
-    .dark-mode .resume-item h4.highlight-blue {
-      color: #149ddd !important;
-    }
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     
-    .dark-mode .resume-item h4:not(.highlight-blue) {
-      color: #fff !important;
-    }
+    <!-- Favicon -->
+    <link href="assets/img/profile.png" rel="icon">
 
-    /* Section titles in dark mode */
-    .dark-mode .resume-title,
-    .dark-mode .section-title h2 {
-      color: #149ddd !important;
-    }
-
-    /* Certificate titles in dark mode */
-    .dark-mode .certification-item h4 {
-      color: #149ddd !important;
-    }
-
-    /* Skills section background in dark mode */
-    .dark-mode .skills-container {
-      background-color: initial !important;
-    }
-
-    /* Skill category boxes in dark mode */
-    .dark-mode .skills-category {
-      background-color: #1a1a1a !important;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    /* Category headers in dark mode */
-    .dark-mode .category-header h3 {
-      color: #149ddd !important;
-    }
-
-    /* Contact details in dark mode */
-    .dark-mode .info h4 {
-      color: #149ddd !important;
-    }
-
-    .dark-mode .info p,
-    .dark-mode .info a {
-      color: #fff !important;
-    }
-
-    /* Skill level backgrounds in dark mode */
-    .dark-mode .skill-card.advanced {
-      background-color: #133a4c !important;
-    }
-    .dark-mode .skill-card.intermediate {
-      background-color: #1d4d3a !important;
-    }
-    .dark-mode .skill-card.basic {
-      background-color: #4d4421 !important;
-    }
-    /* Brighten text in skill cards in dark mode */
-    .dark-mode .skill-card span,
-    .dark-mode .skill-card i {
-      color: #fff !important;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-    }
-
-    /* Skill level legend backgrounds in dark mode */
-    .dark-mode .skills-legend {
-      background-color: #1a1a1a !important;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .dark-mode .legend-item {
-      background-color: transparent !important;
-    }
-
-    /* --- Global Font Colors --- */
-    body {
-      color: #222;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      color: #111;
-    }
-    a {
-      color: #149ddd;
-    }
-    a:hover, a:focus {
-      color: #0d6efd;
-    }
-    .section-title p,
-    .resume-item p,
-    .about-bullets li,
-    .skills-legend span,
-    .legend-item span,
-    .info p,
-    .info a {
-      color: #444;
-    }
-    .muted, .text-muted {
-      color: #888 !important;
-    }
-
-    /* --- Dark Mode Font Colors --- */
-    .dark-mode body {
-      color: #e0e0e0;
-    }
-    .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
-      color: #fff;
-    }
-    .dark-mode a {
-      color: #149ddd;
-    }
-    .dark-mode a:hover, .dark-mode a:focus {
-      color: #66c2ff;
-    }
-    .dark-mode .section-title p,
-    .dark-mode .resume-item p,
-    .dark-mode .about-bullets li,
-    .dark-mode .skills-legend span,
-    .dark-mode .legend-item span,
-    .dark-mode .info p,
-    .dark-mode .info a {
-      color: #ccc;
-    }
-    .dark-mode .muted, .dark-mode .text-muted {
-      color: #aaa !important;
-    }
-
-    /* --- Certificates Grid Card Layout --- */
-    .certificates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .certificate-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      transition: box-shadow 0.2s, transform 0.2s;
-      min-height: 170px;
-    }
-    .certificate-card:hover {
-      box-shadow: 0 4px 16px rgba(20,157,221,0.15);
-      transform: translateY(-4px) scale(1.02);
-    }
-    .certificate-card h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      color: #149ddd;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .certificate-card .issuer {
-      font-size: 0.95rem;
-      color: #666;
-      margin-bottom: 0.7rem;
-    }
-    .certificate-card a {
-      margin-top: auto;
-      color: #149ddd;
-      font-weight: 500;
-      text-decoration: none;
-      border: 1px solid #149ddd;
-      border-radius: 6px;
-      padding: 0.3rem 0.8rem;
-      font-size: 0.95rem;
-      transition: background 0.2s, color 0.2s;
-      display: inline-block;
-    }
-    .certificate-card a:hover {
-      background: #149ddd;
-      color: #fff;
-    }
-    /* Dark mode for certificate cards */
-    .dark-mode .certificate-card {
-      background: #181c20;
-      box-shadow: 0 2px 8px rgba(20,157,221,0.08);
-    }
-    .dark-mode .certificate-card h4 {
-      color: #66c2ff;
-    }
-    .dark-mode .certificate-card .issuer {
-      color: #bbb;
-    }
-    .dark-mode .certificate-card a {
-      color: #66c2ff;
-      border-color: #66c2ff;
-    }
-    .dark-mode .certificate-card a:hover {
-      background: #66c2ff;
-      color: #181c20;
-    }
-
-    /* Dark mode styles for Email Me and Download Resume buttons */
-    .dark-mode .about-buttons .resdown {
-      background: #7c3aed !important;
-      color: #fff !important;
-      border: 1px solid #7c3aed !important;
-    }
-    .dark-mode .about-buttons .resdown:hover {
-      background: #5b21b6 !important;
-      border-color: #5b21b6 !important;
-      color: #fff !important;
-    }
-
-    /* Contact section spacing improvements */
-    .contact .info > div {
-      margin-bottom: 1.2rem;
-    }
-    .contact .info > div:last-child {
-      margin-bottom: 0;
-    }
-    .contact .info .email h4 {
-      margin-bottom: 0.4rem;
-    }
-    .contact .info .email p {
-      margin-bottom: 0.2rem;
-      line-height: 1.5;
-    }
-    .contact .info .email p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Custom style for company links in experience section */
-    .company-link {
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 0.2s, text-decoration 0.2s;
-    }
-    .company-link:hover, .company-link:active {
-      color: #149ddd;
-      text-decoration: underline;
-    }
-    .company-link:visited {
-      color: inherit;
-    }
-    .company-link:focus {
-      color: inherit;
-      text-decoration: none;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Skip Navigation -->
-  <a href="#main" class="skip-nav">Skip to main content</a>
 
-  <!-- Mobile nav toggle button -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none" role="button" aria-label="Toggle navigation menu" tabindex="0"></i>
-
-  <!-- Header -->
-  <header id="header">
-    <div class="d-flex flex-column">
-      <div class="profile">
-        <img src="resume/assets/img/g2.jpg" alt="Puspha Raj Pandeya's profile picture" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Puspha Raj Pandeya</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/Puspha22" class="github" title="GitHub" aria-label="Visit my GitHub profile"><i class="bx bxl-github" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/" class="linkedin" title="LinkedIn" aria-label="Visit my LinkedIn profile"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
-          <a href="mailto:puspharajpandey@gmail.com" class="gmail" title="Email" aria-label="Send me an email"><i class="bx bxl-gmail" aria-hidden="true"></i></a>           
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand">Puspha Raj Pandeya</a>
+            <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <nav id="navbar" class="nav-menu navbar" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active" aria-current="page"><i class="bx bx-home" aria-hidden="true"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user" aria-hidden="true"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank" aria-hidden="true"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-server" aria-hidden="true"></i><span>Projects</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server" aria-hidden="true"></i><span>Skills</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope" aria-hidden="true"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav>
-    </div>
+    <main class="main">
+        <!-- Hero -->
+        <section id="hero" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Data Engineer & ML Enthusiast</span>
+                    <h1 class="hero-title">Turning Data into <br> <span>Actionable Insights</span></h1>
+                    <p class="hero-description">
+                        I build scalable data pipelines, train machine learning models, and solve complex business problems using SQL and Data Warehousing technologies.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-img-wrapper">
+                    <img src="assets/img/profile.png" alt="Puspha Raj Pandeya" class="hero-img">
+                </div>
+            </div>
+        </section>
 
-    <!-- Dark Mode Toggle -->
-    <div class="wrapper">
-      <input type="checkbox" id="hide-checkbox" onclick="darkMode()" aria-label="Toggle dark mode">
-      <label for="hide-checkbox" class="toggle" aria-hidden="true">
-        <span class="toggle-button">
-          <span class="crater crater-1"></span>
-          <span class="crater crater-2"></span>
-          <span class="crater crater-3"></span>   
-          <span class="crater crater-4"></span>
-          <span class="crater crater-5"></span>
-          <span class="crater crater-6"></span>
-          <span class="crater crater-7"></span>
-        </span>
-        <span class="star star-1"></span>
-        <span class="star star-2"></span>
-        <span class="star star-3"></span>
-        <span class="star star-4"></span>
-        <span class="star star-5"></span>
-        <span class="star star-6"></span>
-        <span class="star star-7"></span>
-        <span class="star star-8"></span>
-      </label>
-    </div>
-  </header>
+        <!-- About -->
+        <section id="about" class="about section">
+            <div class="container about-container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <span class="section-subtitle">Who I Am</span>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate <strong>Data Engineer</strong> and <strong>Machine Learning Engineer</strong> currently pursuing my Master's in Computer Science.</p>
+                        <p>My journey has been driven by a fascination with extracting meaningful patterns from complex datasets. Throughout my career, I've worked across healthcare, e-commerce, and infrastructure development projects.</p>
+                        
+                        <div class="about-info">
+                            <div class="info-item"><i class='bx bx-check-circle'></i><span>Efficient Data Pipelines</span></div>
+                            <div class="info-item"><i class='bx bx-check-circle'></i><span>US Healthcare Data</span></div>
+                            <div class="info-item"><i class='bx bx-check-circle'></i><span>Machine Learning Models</span></div>
+                        </div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Puspha Raj Pandeya</h1>
-      <p>I'm <span class="typed" data-typed-items="a Data Engineer., a Machine Learning Engineer." aria-label="I am a Data Engineer and Machine Learning Engineer"></span></p>
-    </div>
-    <!-- Scroll Down Indicator (right content center) -->
-    <div class="scroll-down-indicator" aria-label="Scroll down">
-      <div class="scroll-down-btn">
-        <i class="bi bi-arrow-down-short" aria-hidden="true"></i>
-      </div>
-    </div>
-  </section>
+                        <div class="about-actions">
+                            <button onclick="downloadResume()" class="btn btn-small">
+                                <i class='bx bx-download'></i> Download Resume
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <main id="main">    
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>About</h2>
-          <p>I'm a passionate Data Engineer and Machine Learning enthusiast currently pursuing my Master's in Computer Science. With a problem-solving mindset and curiosity for emerging technologies, I enjoy tackling complex data challenges and developing innovative solutions that deliver real-world impact.</p>
+        <!-- Experience -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                    <span class="section-subtitle">My Professional Journey</span>
+                </div>
+
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Data Engineer</h3>
+                                <span class="timeline-company">Cedar Gate Technologies</span>
+                                <span class="timeline-date">June 2023 - August 2024</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Managed the ingestion of raw US healthcare data from <strong>AWS S3</strong> buckets. Utilized <strong>SQL (DBeaver, MySQL Workbench)</strong> to analyze claims and clinical data for eligibility and cost distribution. Performed complex data mapping and preprocessing to standardize disparate client files into a unified company-wide schema, enabling accurate downstream processing for client-facing analytical dashboards.
+                            </p>
+                            <a href="#" onclick="openExperienceLetter('cedar')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Freelance Data Consultant</h3>
+                                <span class="timeline-company">Dekods INC.</span>
+                                <span class="timeline-date">Project-based</span>
+                            </div>
+                            <p class="timeline-desc">Processed 100,000+ records for UNICEF rural infrastructure initiative. Developed PowerBI dashboards with DAX to visualize key metrics for stakeholders.</p>
+                            <a href="#" onclick="openExperienceLetter('dekods')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Associate ML Engineer</h3>
+                                <span class="timeline-company">Eydean INC.</span>
+                                <span class="timeline-date">Nov 2021 - Jan 2023</span>
+                            </div>
+                            <p class="timeline-desc">Built sales forecasting models using ARIMA/SARIMA. Developed recommendation systems and designed data pipelines with ELK stack.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education" class="education section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education</h2>
+                    <span class="section-subtitle">Academic Background</span>
+                </div>
+                
+                <!-- Degrees -->
+                <div class="education-grid">
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
+                        <div class="edu-data">
+                            <h3 class="edu-degree">Masters in Computer Science</h3>
+                            <span class="edu-school">Southern Illinois University Edwardsville</span>
+                            <div class="edu-meta">
+                                <span><i class='bx bx-calendar'></i> Exp. May 2026</span>
+                                <span><i class='bx bx-star'></i> GPA: 3.45</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class='bx bxs-book-reader'></i></div>
+                        <div class="edu-data">
+                            <h3 class="edu-degree">Bachelors in Computer Engineering</h3>
+                            <span class="edu-school">Nepal College of Information Technology</span>
+                            <div class="edu-meta">
+                                <span><i class='bx bx-calendar'></i> 2017 - 2022</span>
+                                <span><i class='bx bx-star'></i> GPA: 3.03</span>
+                            </div>
+                            <a href="#" onclick="openTranscript()" class="link-item mt-2">View Transcript <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications (Restored) -->
+                <div class="certs-section">
+                    <h3 class="certs-title">Certifications</h3>
+                    <div class="certs-grid">
+                        <!-- Cert 1 -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class='bx bxl-aws'></i></div>
+                            <div class="cert-info">
+                                <h4>AWS Academy Data Analytics</h4>
+                                <span>AWS Academy</span>
+                                <a href="https://www.credly.com/badges/9b876ed2-a784-4f10-bf6b-fcf7f80c0d45/public_url" target="_blank" class="cert-link">View Credential <i class='bx bx-link-external'></i></a>
+                            </div>
+                        </div>
+                        <!-- Cert 2 -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class='bx bxl-python'></i></div>
+                            <div class="cert-info">
+                                <h4>Python for Everybody Specialization</h4>
+                                <span>Coursera</span>
+                                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/JQ6J7FTSDAG6" target="_blank" class="cert-link">View Credential <i class='bx bx-link-external'></i></a>
+                            </div>
+                        </div>
+                        <!-- Cert 3 -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class='bx bx-data'></i></div>
+                            <div class="cert-info">
+                                <h4>Retrieving, Processing, and Visualizing Data with Python</h4>
+                                <span>Coursera</span>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/JR4BG6DB9YEF" target="_blank" class="cert-link">View Credential <i class='bx bx-link-external'></i></a>
+                            </div>
+                        </div>
+                        <!-- Cert 4 -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class='bx bx-code-curly'></i></div>
+                            <div class="cert-info">
+                                <h4>Python Data Structures</h4>
+                                <span>Coursera</span>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/7WKJYBSVA7YJ" target="_blank" class="cert-link">View Credential <i class='bx bx-link-external'></i></a>
+                            </div>
+                        </div>
+                        <!-- Cert 5 -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class='bx bxs-data'></i></div>
+                            <div class="cert-info">
+                                <h4>Using Databases with Python</h4>
+                                <span>Coursera</span>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/TDXBK2NPKZBD" target="_blank" class="cert-link">View Credential <i class='bx bx-link-external'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                    <span class="section-subtitle">My Technical Stack</span>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-group">
+                        <h3 class="skills-group-title"><i class='bx bx-brain'></i> Data Science & ML</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">PowerBI</span>
+                        </div>
+                    </div>
+                    <div class="skills-group">
+                        <h3 class="skills-group-title"><i class='bx bx-server'></i> Data Engineering</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">ETL</span>
+                            <span class="skill-tag">AWS (S3)</span>
+                            <span class="skill-tag">Data Mapping</span>
+                            <span class="skill-tag">Airflow</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skills-group">
+                        <h3 class="skills-group-title"><i class='bx bx-code-alt'></i> Web & Backend</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">ELK Stack</span>
+                        </div>
+                    </div>
+                    <div class="skills-group">
+                        <h3 class="skills-group-title"><i class='bx bx-wrench'></i> Tools</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">DBeaver</span>
+                            <span class="skill-tag">MySQL Workbench</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <span class="section-subtitle">What I've Built</span>
+                </div>
+                <div class="projects-placeholder">
+                    <div class="placeholder-icon"><i class='bx bx-loader-circle bx-spin'></i></div>
+                    <h3>Under Construction</h3>
+                    <p>The projects gallery is currently being updated with my latest work. Check back soon!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <span class="section-subtitle">Contact Me</span>
+                </div>
+                <div class="contact-grid">
+                    <a href="mailto:puspharajpandey@gmail.com" class="contact-card">
+                        <i class='bx bx-envelope'></i>
+                        <h3>Email</h3>
+                        <span>puspharajpandey@gmail.com</span>
+                    </a>
+                    <div class="contact-card">
+                        <i class='bx bx-phone'></i>
+                        <h3>Phone</h3>
+                        <span>(636) 378-8382</span>
+                    </div>
+                    <div class="contact-card">
+                        <i class='bx bx-map'></i>
+                        <h3>Location</h3>
+                        <span>St. Peters, Missouri, USA</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Puspha22" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Puspha Raj Pandeya. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
-            <img src="resume/assets/img/pushpa-raj-crop-again.png" class="img-fluid" alt="Puspha Raj Pandeya's professional photo">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="200">
-            <h3>Data Engineer &amp; Machine Learning Engineer</h3>
-            <p class="fst-italic">
-              "The goal is to turn data into information, and information into insight." - Carly Fiorina
-            </p>
-            <p>
-              My journey in data engineering and machine learning has been driven by a fascination with extracting meaningful patterns from complex datasets. Throughout my career, I've worked across healthcare, e-commerce, and infrastructure development projects, bringing data-driven solutions to diverse business challenges.
-            </p>
-            
-            <ul class="about-bullets">
-              <li>Passionate about developing efficient data pipelines and systems that power real-world insights</li>
-              <li>Experience working with US healthcare, e-commerce, and international development projects</li>
-              <li>Committed to continuous learning and staying current with emerging technologies</li>
-            </ul>
-            
-            <div class="about-buttons">
-              <a href="mailto:puspharajpandey@gmail.com" class="resdown" aria-label="Send me an email">Email me</a>
-              <button class="resdown" onclick="resumes()" aria-label="Download my resume">Download resume</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-   
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>Resume</h2>
-          <p>Experienced Data Engineer and Machine Learning enthusiast with over 3 years of professional experience. Skilled in developing data pipelines, ETL processes, and machine learning models to solve complex business problems.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4 class="highlight-blue">Masters in Computer Science</h4>
-              <h4>August, 2024 - Ongoing</h4>
-              <p><em><a href="https://www.siue.edu/" target="_blank" rel="noopener" class="company-link">Southern Illinois University Edwardsville</a></em></p>
-            </div>
-            <div class="resume-item pb-0">
-              <h4 class="highlight-blue">Bachelors in Computer Engineering</h4>
-              <h4>September, 2017 - August, 2022</h4>
-              <p><em><a href="https://ncit.edu.np/" target="_blank" rel="noopener" class="company-link">Nepal College of Information Technology, Kathmandu, Nepal</a></em></p>
-              <p>GPA: 3.03</p>
-              <p><a href="#" onclick="openTranscript()" class="transcript-link"><i class="bi bi-file-earmark-text"></i> Transcript</a></p>
-            </div>
-            <!-- Certifications restyled to match resume-item format -->
-            <h3 class="resume-title" style="margin-top:32px;">Certifications</h3>
-            <div class="certifications-list">
-              <div class="resume-item">
-                <h4 class="highlight-blue">AWS Academy Graduate - AWS Academy Data Analytics</h4>
-                <p><em>AWS Academy</em></p>
-                <p><a href="https://www.credly.com/badges/9b876ed2-a784-4f10-bf6b-fcf7f80c0d45/public_url" target="_blank" rel="noopener">View Certificate</a></p>
-              </div>
-              <div class="resume-item">
-                <h4 class="highlight-blue">Python for Everybody Specialization</h4>
-                <p><em>Coursera</em></p>
-                <p><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/JQ6J7FTSDAG6" target="_blank" rel="noopener">View Certificate</a></p>
-              </div>
-              <div class="resume-item">
-                <h4 class="highlight-blue">Capstone: Retrieving, Processing, and Visualizing Data with Python</h4>
-                <p><em>Coursera</em></p>
-                <p><a href="https://www.coursera.org/account/accomplishments/certificate/JR4BG6DB9YEF" target="_blank" rel="noopener">View Certificate</a></p>
-              </div>
-              <div class="resume-item">
-                <h4 class="highlight-blue">Python Data Structures</h4>
-                <p><em>Coursera</em></p>
-                <p><a href="https://www.coursera.org/account/accomplishments/certificate/7WKJYBSVA7YJ" target="_blank" rel="noopener">View Certificate</a></p>
-              </div>
-              <div class="resume-item">
-                <h4 class="highlight-blue">Using Databases with Python</h4>
-                <p><em>Coursera</em></p>
-                <p><a href="https://www.coursera.org/account/accomplishments/certificate/TDXBK2NPKZBD" target="_blank" rel="noopener">View Certificate</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4 class="highlight-blue">Data Engineer</h4>
-              <h4>June 2023 - August 2024</h4>
-              <p><em><a href="https://www.cedargate.com/" target="_blank" rel="noopener" class="company-link">Cedar Gate Technologies</a></em> <a href="#" onclick="openExperienceLetter('cedar')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
-              <ul>
-                <li>Analyzed US healthcare data to identify patient cost distributions and insurance claim legitimacy.</li>
-                <li>Cleaned, transformed, and mapped raw patient data to company-wide schema.</li>
-                <li>Standardized fields and conducted member information matching across data sources.</li>
-                <li>Applied statistical techniques to interpret member demography and member months data.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4 class="highlight-blue">Freelance Data Analytics Consultant</h4>
-              <h4>Project-based</h4>
-              <p><em><a href="https://dndts.net/" target="_blank" rel="noopener" class="company-link">Dekods INC.</a></em> <a href="#" onclick="openExperienceLetter('dekods')" class="experience-link"><i class="bi bi-file-earmark-pdf"></i> Experience Letter</a></p>
-              <ul>
-                <li>Processed 100,000+ records for UNICEF rural infrastructure initiative in Nepal.</li>
-                <li>Performed exploratory data analysis using Pandas and Python.</li>
-                <li>Created data cleaning and transformation scripts for large datasets.</li>
-                <li>Developed PowerBI dashboards with DAX to visualize key metrics for stakeholders.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4 class="highlight-blue">Associate Machine Learning Engineer and Python Developer</h4>
-              <h4>November 2021 - January 2023</h4>
-              <p><em><a href="https://eydean.com/" target="_blank" rel="noopener" class="company-link">Eydean INC.</a></em></p>
-              <ul>
-                <li>Built sales forecasting models using ARIMA and SARIMA time series analysis.</li>
-                <li>Developed recommendation systems using cosine similarity and Non-negative matrix factorization techniques.</li>
-                <li>Created an e-commerce chatbot using NLP and neural networks.</li>
-                <li>Designed data pipelines with ELK stack and built dashboards in Kibana.</li>
-                <li>Implemented ETL processes to integrate data from multiple databases into warehouses.</li>
-                <li>Developed scalable backend systems using Flask, FastAPI, and MongoDB.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2>Projects</h2>
-        </div>
-        <p style="background:#149ddd;color:#fff;font-weight:600;padding:1rem 1.5rem;border-radius:8px;text-align:center;max-width:500px;margin:2rem auto 1rem auto;font-size:1.15rem;box-shadow:0 2px 8px rgba(20,157,221,0.10);">Projects section is currently under development. More coming soon!</p>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>My technical toolkit spans multiple domains, enabling me to deliver end-to-end data and ML solutions.</p>
-        </div>
-        
-        <!-- Skills Legend -->
-        <div class="skills-legend" role="legend" aria-label="Skill level indicators">
-          <div class="legend-item">
-            <div class="legend-color advanced" aria-label="Advanced skill level"></div>
-            <span>Advanced</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-color intermediate" aria-label="Intermediate skill level"></div>
-            <span>Intermediate</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-color basic" aria-label="Basic skill level"></div>
-            <span>Basic</span>
-          </div>
-        </div>
-
-        <div class="skills-container">
-          <!-- Software Development -->
-          <div class="skills-category" data-aos="fade-up">
-            <div class="category-header">
-              <i class="bx bx-code-alt" aria-hidden="true"></i>
-              <h3>Software Development</h3>
-            </div>
-            <div class="skills-grid" role="list" aria-label="Software Development Skills">
-              <!-- Advanced (Blue) -->
-              <div class="skill-card advanced" role="listitem" aria-label="Python - Advanced">
-                <i class="bx bxl-python" aria-hidden="true"></i>
-                <span>Python</span>
-              </div>
-              <div class="skill-card advanced" role="listitem" aria-label="Pandas - Advanced">
-                <i class="bx bx-data" aria-hidden="true"></i>
-                <span>Pandas</span>
-              </div>
-              <div class="skill-card advanced" role="listitem" aria-label="SQL - Advanced">
-                <i class="bx bx-table" aria-hidden="true"></i>
-                <span>SQL</span>
-              </div>
-              <div class="skill-card advanced" role="listitem" aria-label="Git - Advanced">
-                <i class="bx bxl-git" aria-hidden="true"></i>
-                <span>Git</span>
-              </div>
-              <div class="skill-card advanced" role="listitem" aria-label="Flask - Advanced">
-                <i class="bx bx-server" aria-hidden="true"></i>
-                <span>Flask</span>
-              </div>
-              
-              <!-- Intermediate (Green) -->
-              <div class="skill-card intermediate" role="listitem" aria-label="MongoDB - Intermediate">
-                <i class="bx bx-cube-alt" aria-hidden="true"></i>
-                <span>MongoDB</span>
-              </div>
-              <div class="skill-card intermediate" role="listitem" aria-label="Docker - Intermediate">
-                <i class="bx bxl-docker" aria-hidden="true"></i>
-                <span>Docker</span>
-              </div>
-              <div class="skill-card intermediate" role="listitem" aria-label="FastAPI - Intermediate">
-                <i class="bx bx-bolt-circle" aria-hidden="true"></i>
-                <span>FastAPI</span>
-              </div>
-              
-              <!-- Basic (Yellow) -->
-              <div class="skill-card basic" role="listitem" aria-label="HTML - Basic">
-                <i class="bx bxl-html5" aria-hidden="true"></i>
-                <span>HTML</span>
-              </div>
-              <div class="skill-card basic" role="listitem" aria-label="CSS - Basic">
-                <i class="bx bxl-css3" aria-hidden="true"></i>
-                <span>CSS</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Data and ML Skills -->
-          <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
-            <div class="category-header">
-              <i class="bx bx-line-chart"></i>
-              <h3>Data Engineering & ML</h3>
-            </div>
-            <div class="skills-grid">
-              <!-- Advanced (Blue) -->
-              <div class="skill-card advanced">
-                <i class="bx bx-analyse"></i>
-                <span>Data Engineering</span>
-              </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-brain"></i>
-                <span>Machine Learning</span>
-              </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-transfer-alt"></i>
-                <span>ETL</span>
-              </div>
-              
-              <!-- Intermediate (Green) -->
-              <div class="skill-card intermediate">
-                <i class="bx bx-camera"></i>
-                <span>Computer Vision</span>
-              </div>
-              <div class="skill-card intermediate">
-                <i class="bx bx-chat"></i>
-                <span>NLP</span>
-              </div>
-              <div class="skill-card intermediate">
-                <i class="bx bx-cylinder"></i>
-                <span>Big Data</span>
-              </div>
-              
-              <!-- Basic (Yellow) -->
-              <div class="skill-card basic">
-                <i class="bx bx-scatter-chart"></i>
-                <span>ELK</span>
-              </div>
-              <div class="skill-card basic">
-                <i class="bx bx-wind"></i>
-                <span>Airflow</span>
-              </div>
-              <div class="skill-card basic">
-                <i class="bx bx-network-chart"></i>
-                <span>Kafka</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-            <div class="category-header">
-              <i class="bx bx-wrench"></i>
-              <h3>General Tools</h3>
-            </div>
-            <div class="skills-grid">
-              <!-- Advanced (Blue) -->
-              <div class="skill-card advanced">
-                <i class="bx bx-bar-chart-alt-2"></i>
-                <span>PowerBI</span>
-              </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-data"></i>
-                <span>DBeaver</span>
-              </div>
-              <div class="skill-card advanced">
-                <i class="bx bx-table"></i>
-                <span>MySQL Workbench</span>
-              </div>
-              
-              <!-- Intermediate (Green) -->
-              <div class="skill-card intermediate">
-                <i class="bx bxl-microsoft"></i>
-                <span>Microsoft Office</span>
-              </div>
-              <div class="skill-card intermediate">
-                <i class="bx bxl-aws"></i>
-                <span>AWS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Feel free to reach out to me through any of the following contact methods.</p>
-        </div>
-
-        <div class="row" data-aos="fade-in" data-aos-delay="100">
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="email">
-                <i class="bi bi-envelope" aria-hidden="true"></i>
-                <h4>Email:</h4>
-                <p style="margin-bottom:0.2rem;"><a href="mailto:puspand@siue.edu" aria-label="Send email to puspand@siue.edu">puspand@siue.edu</a></p>
-                <p style="margin-bottom:0;"><a href="mailto:puspharajpandey@gmail.com" aria-label="Send email to puspharajpandey@gmail.com">puspharajpandey@gmail.com</a></p>
-              </div>
-              <div class="phone">
-                <i class="bi bi-phone" aria-hidden="true"></i>
-                <h4>Call:</h4>
-                <p><a href="tel:+16363788382" aria-label="Call (636) 378-8382">(636) 378-8382</a></p>
-              </div>
-              <div class="address">
-                <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                <h4>Location:</h4>
-                <p>Saint Peters, Missouri, USA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-      <a href="mailto:puspharajpandey@gmail.com" class="email-link active" aria-label="Send email to puspharajpandey@gmail.com"><i class="bx bxl-gmail" aria-hidden="true"></i> <span>&nbsp;Email me</span></a>
-      <div class="copyright">
-        <button class="resdown" onclick="resumes()" aria-label="Download my resume">Download resume</button>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
-
-  <!-- Scripts -->
-  <script>
-    // Wait for DOM content to be loaded
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize AOS with a small delay
-      setTimeout(function() {
-        AOS.init({
-          duration: 1000,
-          easing: 'ease-in-out',
-          once: true,
-          mirror: false,
-          disable: 'mobile'
-        });
-      }, 500);
-
-      // Add keyboard navigation for portfolio filters
-      const filters = document.querySelectorAll('#portfolio-flters li');
-      filters.forEach(filter => {
-        filter.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            filter.click();
-          }
-        });
-      });
-    });
-    
-    function darkMode() {
-      var element = document.body;
-      element.classList.toggle("dark-mode");
-      
-      if (document.getElementById("hero").style.backgroundImage === "") {
-        document.getElementById("hero").style.backgroundImage = "url('resume/assets/img/white_black_3.png')";
-        document.getElementById("hero").style.color = "white";
-      }
-      else if (document.getElementById("hero").style.backgroundImage === 'url("resume/assets/img/white_black_3.png")') {
-        document.getElementById("hero").style.backgroundImage = "url('resume/assets/img/orange_white.png')";
-        document.getElementById("hero").style.color = "black";
-      } else {
-        document.getElementById("hero").style.backgroundImage = "url('resume/assets/img/white_black_3.png')";
-        document.getElementById("hero").style.color = "white";
-      }
-    }
-    
-    function resumes() {
-      window.open("resume/assets/resume/Resume.pdf");
-    }
-    
-    function openTranscript() {
-      window.open("resume/assets/resume/Transcript.pdf");
-    }
-    
-    function openExperienceLetter(company) {
-      if (company === 'cedar') {
-        window.open("resume/assets/resume/cedar gate experience leter.pdf");
-      } else if (company === 'dekods') {
-        window.open("resume/assets/resume/Dekods Experience Letter.pdf");
-      }
-    }
-  </script>
-
-  <!-- Vendor JS Files -->
-  <script src="resume/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="resume/assets/vendor/aos/aos.js"></script>
-  <script src="resume/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resume/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="resume/assets/vendor/typed.js/typed.min.js"></script>
-  <script src="resume/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="resume/assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="resume/assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
