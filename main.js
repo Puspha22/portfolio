@@ -3,7 +3,8 @@
 ============================= */
 const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.querySelectorAll('.nav-link');
+// UPDATED: Selects both regular links AND the new "Book a Call" button
+const navLinks = document.querySelectorAll('.nav-link, .nav-cta'); 
 
 // Show/Hide Menu on Mobile
 if (navToggle) {
@@ -21,13 +22,15 @@ if (navToggle) {
     });
 }
 
-// Close Menu when a link is clicked
+// Close Menu when ANY link or button is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
         const icon = navToggle.querySelector('i');
-        icon.classList.remove('bx-x');
-        icon.classList.add('bx-menu');
+        if(icon) {
+            icon.classList.remove('bx-x');
+            icon.classList.add('bx-menu');
+        }
     });
 });
 
@@ -43,6 +46,7 @@ function scrollActive() {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 100;
         const sectionId = current.getAttribute('id');
+        // Looks for links that point to this section ID
         const sectionLink = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
 
         if (sectionLink) {
@@ -71,20 +75,67 @@ window.addEventListener('scroll', scrollHeader);
 
 /* =============================
    FILE OPENING FUNCTIONS
-   (Updated to match new folder structure)
 ============================= */
-function downloadResume() {
-    window.open("assets/docs/Resume.pdf");
-}
-
-function openTranscript() {
-    window.open("assets/docs/Transcript.pdf");
-}
-
 function openExperienceLetter(company) {
     if (company === 'cedar') {
         window.open("assets/docs/CedarGate_Exp.pdf");
     } else if (company === 'dekods') {
         window.open("assets/docs/Dekods_Exp.pdf");
     }
+}
+// Note: downloadResume() and openTranscript() were removed as they 
+// are not currently connected to buttons in the new layout.
+
+/* =============================
+   AJAX CONTACT FORM (New!)
+   Prevents page reload on submit
+============================= */
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Stop the redirect
+        
+        const btn = contactForm.querySelector('button');
+        const originalText = btn.innerText;
+        
+        // 1. Show Loading State
+        btn.innerText = 'Sending...';
+        btn.style.opacity = '0.7';
+        
+        // 2. Collect Data
+        const formData = new FormData(contactForm);
+        
+        // 3. Send to Formspree
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Success State
+                btn.innerText = 'Message Sent!';
+                btn.style.backgroundColor = '#059669'; // Green
+                contactForm.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = ''; 
+                    btn.style.opacity = '1';
+                }, 3000);
+            } else {
+                throw new Error('Failed to send');
+            }
+        } catch (error) {
+            // Error State
+            alert("Oops! There was a problem sending your form. Please try again.");
+            btn.innerText = originalText;
+            btn.style.opacity = '1';
+        }
+    });
 }
