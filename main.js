@@ -175,13 +175,13 @@ function toggleExperienceDetails(btn) {
         // Expand: add class and set exact scrollHeight
         expandedEl.classList.add('open');
         expandedEl.style.maxHeight = expandedEl.scrollHeight + 'px';
-        btn.innerHTML = `<i class='bx bx-chevron-up'></i> Hide Achievements`;
+        btn.innerHTML = `<i class='bx bx-chevron-up'></i> Show Less`;
         btn.setAttribute('aria-expanded', 'true');
     } else {
         // Collapse: reset height and remove class
         expandedEl.style.maxHeight = '0px';
         expandedEl.classList.remove('open');
-        btn.innerHTML = `<i class='bx bx-chevron-down'></i> Show Achievements`;
+        btn.innerHTML = `<i class='bx bx-chevron-down'></i> Learn More`;
         btn.setAttribute('aria-expanded', 'false');
         
         // UX improvement: smooth scroll back to card top on collapse
