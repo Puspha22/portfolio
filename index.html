@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Puspha Raj Pandeya - Data Scientist & AI Engineer specializing in scalable pipelines.">
+    <meta name="description"
+        content="Puspha Raj Pandeya - Data Scientist & AI Engineer specializing in scalable pipelines.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.puspharaj.com.np/">
     <meta property="og:title" content="Puspha Raj Pandeya | Data Scientist & AI Engineer">
-    <meta property="og:description" content="Building production-grade ML models and scalable data pipelines. View my case studies.">
+    <meta property="og:description"
+        content="Building production-grade ML models and scalable data pipelines. View my case studies.">
     <meta property="og:image" content="https://www.puspharaj.com.np/assets/img/profile.png">
 
     <meta property="twitter:card" content="summary_large_image">
@@ -23,14 +26,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    
+
     <link href="assets/img/profile.png" rel="icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css?v=1.1">
 
     <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r),var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        
-        posthog.init('phx_jq24ZDL1A2Wcz75t2cg9iUj6HxT0T2VXfnFLJNDOEfOpfq7',{api_host:'https://app.posthog.com'})
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+
+        posthog.init('phx_jq24ZDL1A2Wcz75t2cg9iUj6HxT0T2VXfnFLJNDOEfOpfq7', { api_host: 'https://app.posthog.com' })
     </script>
 
     <script type="application/ld+json">
@@ -49,6 +53,7 @@
     }
     </script>
 </head>
+
 <body>
 
     <header id="header">
@@ -58,13 +63,8 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#work" class="nav-link">Work</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li>
-                        <button data-cal-link="puspha-raj-pandeya-uzcsfh/15-min-chat" data-cal-config='{"layout":"month_view"}' class="btn-small nav-cta">
-                            Book a Call
-                        </button>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -77,10 +77,11 @@
                     <div class="status-badge"><i class='bx bxs-circle'></i> Available for Data Science & AI Roles</div>
                     <h1 class="hero-title">Solving Complex Problems with <br> <span>AI & Data Science</span></h1>
                     <p class="hero-description">
-                        I build production-grade <strong>Machine Learning models</strong> and scalable <strong>Data Pipelines</strong>. Proficient in Computer Vision, NLP, and backend APIs (Flask/FastAPI).
+                        I build production-grade <strong>Machine Learning models</strong> and scalable <strong>Data
+                            Pipelines</strong>. Proficient in Computer Vision, NLP, and backend APIs (Flask/FastAPI).
                     </p>
                     <div class="hero-buttons">
-                        <a href="#work" class="btn btn-primary">View AI Case Studies</a>
+                        <a href="#projects" class="btn btn-primary">View AI Case Studies</a>
                         <a href="#contact" class="btn btn-outline">Let's Chat</a>
                     </div>
                     <div class="hero-trust">
@@ -100,9 +101,9 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">The Toolkit</h2>
-                    <span class="section-subtitle">Data Science • Data Engineering • Backend</span>
+                    <span class="section-subtitle">Data Science • Data Engineering</span>
                 </div>
-                
+
                 <div class="bento-grid">
                     <div class="bento-card location-card">
                         <h3>Based in</h3>
@@ -129,14 +130,21 @@
                         <div class="edu-item">
                             <span class="degree">M.S. Computer Science</span>
                             <div class="edu-details">
-                                <span class="school">SIUE (3.45 GPA)</span>
-                                <span class="grad-date"><i class='bx bxs-graduation'></i> Exp. May 2026</span>
+                                <span class="school">SIUE</span>
+                                <span class="grad-date"><i class='bx bxs-graduation'></i> May 2026</span>
+                            </div>
+                        </div>
+                        <div class="edu-item" style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--border);">
+                            <span class="degree">B.E. Computer Engineering</span>
+                            <div class="edu-details">
+                                <span class="school">NCIT</span>
+                                <span class="grad-date"><i class='bx bxs-graduation'></i> Aug 2022</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="bento-card stat-card">
-                        <span class="stat-number">3+</span>
+                        <span class="stat-number">4+</span>
                         <span class="stat-label">Years Experience</span>
                     </div>
                 </div>
@@ -152,7 +160,9 @@
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
                         <i class='bx bxs-quote-alt-left quote-icon'></i>
-                        <p>"Puspha showcased exceptional skills... His expertise in Pandas and Python allowed him to create efficient data cleaning and transformation scripts. I have no hesitation in recommending him."</p>
+                        <p>"Puspha showcased exceptional skills... His expertise in Pandas and Python allowed him to
+                            create efficient data cleaning and transformation scripts. I have no hesitation in
+                            recommending him."</p>
                         <div class="author-info">
                             <h4>Prarup Acharya</h4>
                             <span>CEO, Dekods Inc. Pvt. Ltd.</span>
@@ -160,7 +170,8 @@
                     </div>
                     <div class="testimonial-card">
                         <i class='bx bxs-quote-alt-left quote-icon'></i>
-                        <p>"During his tenure as Data Engineer, his performance was Excellent. He held positions from Associate Data Engineer to Data Engineer."</p>
+                        <p>"During his tenure as Data Engineer, his performance was Excellent. He held positions from
+                            Associate Data Engineer to Data Engineer."</p>
                         <div class="author-info">
                             <h4>Sigma Ghimire</h4>
                             <span>HR Officer, Cedar Gate Technologies</span>
@@ -170,19 +181,21 @@
             </div>
         </section>
 
-        <section id="work" class="work section">
+        <section id="projects" class="projects section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Selected Work</h2>
+                    <h2 class="section-title">Selected Projects</h2>
                     <span class="section-subtitle">AI & Engineering Case Studies</span>
                 </div>
                 <div class="projects-grid">
-                    
+
                     <div class="project-card">
                         <div class="project-content">
                             <span class="project-tag">Computer Vision & AI</span>
                             <h3>Brain Tumor Segmentation (U-Net)</h3>
-                            <p>Built a deep learning model to automate glioma segmentation in MRI scans. Benchmarked U-Net against SegNet, achieving <strong>64.83% Dice Coefficient</strong> for improved diagnostic precision.</p>
+                            <p>Built a deep learning model to automate glioma segmentation in MRI scans. Benchmarked
+                                U-Net against SegNet, achieving <strong>64.83% Dice Coefficient</strong> for improved
+                                diagnostic precision.</p>
                             <div class="project-meta">
                                 <span><i class='bx bxl-python'></i> PyTorch</span>
                                 <span><i class='bx bx-layer'></i> CNNs</span>
@@ -190,31 +203,36 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22/brain-tumor-segmentation-unet-segnet" target="_blank" class="btn-link">View Model Code <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://github.com/Puspha22/brain-tumor-segmentation-unet-segnet" target="_blank"
+                                class="btn-link">View Model Code <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-content">
-                            <span class="project-tag">Data Engineering</span>
-                            <h3>Healthcare Data Pipeline</h3>
-                            <p>Architected an ETL pipeline to ingest raw US healthcare claims. Standardized disparate sources into a unified schema using SQL and Python to enable downstream analytics.</p>
+                            <span class="project-tag">Machine Learning & Data Engineering</span>
+                            <h3>E-Commerce Predictive Analytics Pipeline</h3>
+                            <p>Built a scalable ETL pipeline to process 109M raw events into 23M structured sessions. Conducted predictive model bake-offs (XGBoost, LightGBM) to forecast cart abandonment, achieving a champion F1-score of 0.9697.</p>
                             <div class="project-meta">
-                                <span><i class='bx bxl-aws'></i> AWS S3</span>
-                                <span><i class='bx bxs-data'></i> SQL/MySQL</span>
-                                <span><i class='bx bxl-python'></i> Airflow</span>
+                                <span><i class='bx bxl-python'></i> Python</span>
+                                <span><i class='bx bx-brain'></i> XGBoost</span>
+                                <span><i class='bx bx-layer'></i> LightGBM</span>
+                                <span><i class='bx bxs-data'></i> Parquet</span>
+                                <span><i class='bx bx-code-curly'></i> scikit-learn</span>
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="#" class="btn-link">View Architecture <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://github.com/Puspha22/ecommerce-cart-abandonment-clean" target="_blank" class="btn-link">View Project Code <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-content">
                             <span class="project-tag">NLP & Deep Learning</span>
-                            <h3>Sentiment Analysis (BERT vs CNN)</h3>
-                            <p>Developed a sentiment classification system for business reviews. Fine-tuned <strong>BERT Transformers</strong> achieving <strong>92% accuracy</strong>, outperforming traditional CNN models (85%).</p>
+                            <h3>Production Sentiment Analysis System</h3>
+                            <p>Developed a sentiment classification system for business reviews. Fine-tuned <strong>BERT
+                                    Transformers</strong> achieving <strong>92% accuracy</strong>, outperforming
+                                traditional CNN models (85%).</p>
                             <div class="project-meta">
                                 <span><i class='bx bx-message-rounded-dots'></i> Transformers</span>
                                 <span><i class='bx bxl-python'></i> TensorFlow</span>
@@ -222,15 +240,19 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22" target="_blank" class="btn-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://github.com/Puspha22" target="_blank" class="btn-link">View Project <i
+                                    class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-content">
-                            <span class="project-tag" style="background: #fdf4ff; color: #9333ea;">M.S. Thesis • Research (Ongoing)</span>
+                            <span class="project-tag" style="background: #fdf4ff; color: #9333ea;">M.S. Thesis •
+                                Research</span>
                             <h3>Algorithmic Bias in LLM Code</h3>
-                            <p>Replicating and extending the <em>"Bias Unveiled"</em> paper. Developed a "Smart Combination Testing" framework that solved predicate masking, increasing bias detection by <strong>~108%</strong> (559 to 1,164 cases) compared to the original baseline.</p>
+                            <p>Replicating and extending the <em>"Bias Unveiled"</em> paper. Developed a "Smart
+                                Combination Testing" framework that solved predicate masking, increasing bias detection
+                                by <strong>~108%</strong> (559 to 1,164 cases) compared to the original baseline.</p>
                             <div class="project-meta">
                                 <span><i class='bx bxl-python'></i> Python</span>
                                 <span><i class='bx bx-brain'></i> Gemini API</span>
@@ -238,7 +260,8 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22" target="_blank" class="btn-link">View Research Repo <i class='bx bx-right-arrow-alt'></i></a>
+                            <a href="https://github.com/Puspha22/llm-bias-comparative-analysis" target="_blank"
+                                class="btn-link">View Research Repo <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
@@ -246,10 +269,10 @@
             </div>
         </section>
 
-        <section id="experience" class="experience section">
+        <section id="work" class="experience section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Experience</h2>
+                    <h2 class="section-title">Work Experience</h2>
                     <span class="section-subtitle">My Professional Journey</span>
                 </div>
 
@@ -258,39 +281,93 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="timeline-header">
-                                <h3 class="timeline-title">Data Engineer</h3>
+                                <h3 class="timeline-title">Data Engineer & Analyst</h3>
                                 <span class="timeline-company">Cedar Gate Technologies</span>
                                 <span class="timeline-date">June 2023 - August 2024</span>
                             </div>
                             <p class="timeline-desc">
-                                Managed the ingestion of raw US healthcare data from <strong>AWS S3</strong> buckets. Utilized <strong>SQL</strong> to analyze claims and clinical data. Performed complex data mapping to standardize disparate client files.
+                                Engineered high-throughput ETL data pipelines and automated validation frameworks for a US healthcare platform covering 3.2M lives and $91B in spend. Utilized <strong>Python</strong>, <strong>SQL</strong>, and <strong>AWS S3</strong> to clean, normalize, and resolve demographic data discrepancies.
                             </p>
-                            <a href="#" onclick="openExperienceLetter('cedar')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 class="timeline-title">Freelance Data Consultant</h3>
-                                <span class="timeline-company">Dekods INC.</span>
-                                <span class="timeline-date">Project-based</span>
+                            
+                            <!-- EXPANDABLE ACHIVEMENTS (ACCORDION) -->
+                            <div class="experience-details-expanded">
+                                <ul class="resume-bullet-list">
+                                    <li>Managed the ingestion and transformation of high-volume healthcare data for a platform covering 3.2M lives and $91B in medical spend, ensuring data readiness for downstream analytics.</li>
+                                    <li>Engineered an Automated Data Validation Framework using Python and SQL to systematically audit data integrity, replacing manual schema checks and correcting over 500 monthly data quality discrepancies.</li>
+                                    <li>Refactored and optimized legacy ETL pipelines processing high-volume relational data, applying query tuning that reduced client data onboarding time by 20%.</li>
+                                    <li>Implemented statistical matching algorithms to resolve inconsistencies in member demographic data, creating unified patient records from fragmented sources to improve risk modeling.</li>
+                                    <li>Cleaned, transformed, aggregated, and mapped raw patient data to a company-wide schema to normalize, augment, and enrich data into a single data lake source of truth.</li>
+                                    <li>Maintained strict compliance with HIPAA data security standards, implementing access controls and data masking techniques to protect sensitive Patient Health Information (PHI).</li>
+                                    <li>Collaborated with cross-functional engineering teams in an Agile/Scrum environment to troubleshoot system bottlenecks, refine technical requirements, and define data specifications.</li>
+                                </ul>
                             </div>
-                            <p class="timeline-desc">Processed 100,000+ records for UNICEF rural infrastructure initiative. Developed PowerBI dashboards with DAX to visualize key metrics.</p>
-                            <a href="#" onclick="openExperienceLetter('dekods')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                            
+                            <div class="timeline-actions">
+                                <a href="#" onclick="openExperienceLetter('cedar')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                                <button class="btn-expand-experience" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
+                            </div>
                         </div>
                     </div>
-                    
+
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="timeline-header">
-                                <h3 class="timeline-title">Associate ML Engineer</h3>
+                                <h3 class="timeline-title">Contract Data Analytics Consultant</h3>
+                                <span class="timeline-company">Dekods INC.</span>
+                                <span class="timeline-date">Jan 2023 - Feb 2023</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Architected automated data cleaning pipelines using <strong>Python (Pandas)</strong> to ingest and standardize 100,000+ UNICEF field survey records. Developed interactive <strong>Power BI dashboards</strong> with <strong>DAX</strong> to visualize operational metrics for 50+ remote communities.
+                            </p>
+                            
+                            <!-- EXPANDABLE ACHIVEMENTS (ACCORDION) -->
+                            <div class="experience-details-expanded">
+                                <ul class="resume-bullet-list">
+                                    <li>Cleaned and processed 100,000 record files for a UNICEF initiative to upgrade various infrastructures in Nepal's rural communities, reducing manual data entry effort by 90%.</li>
+                                    <li>Performed exploratory data analysis using Python and Pandas, and designed automated data cleaning and transformation scripts.</li>
+                                    <li>Created and implemented a Power BI dashboard for the UNICEF project team to display important operational metrics, utilizing DAX and visualization best practices to deliver insights.</li>
+                                    <li>Transformed raw survey data into meaningful features to assess the development status of 50+ remote communities, translating complex technical data into clear visual reports.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-actions">
+                                <a href="#" onclick="openExperienceLetter('dekods')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                                <button class="btn-expand-experience" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Associate Machine Learning Engineer & Data Analyst</h3>
                                 <span class="timeline-company">Eydean INC.</span>
                                 <span class="timeline-date">Nov 2021 - Jan 2023</span>
                             </div>
-                            <p class="timeline-desc">Built sales forecasting models using ARIMA/SARIMA. Developed recommendation systems and designed data pipelines with ELK stack.</p>
+                            <p class="timeline-desc">
+                                Deployed predictive sales models (ARIMA/LSTM) and recommendation engines (KNN). Architected real-time business KPIs dashboards using the <strong>ELK Stack</strong> and <strong>Metabase</strong>, developed geospatial delivery maps, and built full-stack workflows using <strong>FastAPI</strong> and <strong>Docker</strong>.
+                            </p>
+                            
+                            <!-- EXPANDABLE ACHIVEMENTS (ACCORDION) -->
+                            <div class="experience-details-expanded">
+                                <ul class="resume-bullet-list">
+                                    <li>Developed and deployed sales forecasting models (ARIMA, SARIMA, LSTM) for 12 warehouses, reducing inventory stockouts by an estimated 18%.</li>
+                                    <li>Engineered customer service chatbots using NLP (BERT) and Neural Networks, handling 500+ weekly queries with 85% intent recognition accuracy.</li>
+                                    <li>Designed and deployed real-time sales analysis dashboards using the ELK Stack to visualize KPIs and monitor live business trends.</li>
+                                    <li>Led a database migration project transferring enterprise client legacy SQL data to NoSQL (MongoDB), developing custom scripts to denormalize and map complex structures with zero data loss.</li>
+                                    <li>Served models via custom scalable REST APIs built in FastAPI and Flask, containerizing full application suites with Docker for standardized deployment.</li>
+                                    <li>Built recommendation systems using Cosine Similarity and KNN collaborative filtering techniques to integrate intelligent features into CRM platforms.</li>
+                                    <li>Built logistics fleet tracking/delivery visualization maps utilizing Leaflet JS, Mapbox, Folium, osmnx, and Dijkstra's algorithm to calculate optimal routes.</li>
+                                    <li>Developed "Bookgara," a full-stack on-demand marketplace, managing database schema designs, booking workflows, and core backend logic in Flask.</li>
+                                    <li>Performed extensive data analysis and designed Metabase dashboards to communicate ERP client business trends to stakeholders.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="timeline-actions text-right">
+                                <button class="btn-expand-experience" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,7 +380,7 @@
                     <h2 class="section-title">Let's Talk Data</h2>
                     <span class="section-subtitle">Get in Touch</span>
                 </div>
-                
+
                 <div class="contact-wrapper">
                     <div class="contact-info">
                         <div class="contact-card">
@@ -316,7 +393,7 @@
                             <h3>Location</h3>
                             <span>St. Peters, MO</span>
                         </div>
-                        
+
                         <div class="connect-section">
                             <h3>Connect & Downloads</h3>
                             <div class="connect-links">
@@ -324,8 +401,10 @@
                                     <i class='bx bxs-file-pdf'></i> Resume
                                 </a>
                                 <div class="social-icons">
-                                    <a href="https://github.com/Puspha22" target="_blank"><i class='bx bxl-github'></i></a>
-                                    <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                    <a href="https://github.com/Puspha22" target="_blank"><i
+                                            class='bx bxl-github'></i></a>
+                                    <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/"
+                                        target="_blank"><i class='bx bxl-linkedin'></i></a>
                                 </div>
                             </div>
                         </div>
@@ -348,19 +427,14 @@
         </section>
 
     </main>
-    
+
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Puspha Raj Pandeya. Built like a Product.</p>
+            <p>&copy; 2026 Puspha Raj Pandeya. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="main.js"></script>
-
-    <script>
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, arguments) : p(cal, arguments); return; } p(cal, arguments); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", {origin:"https://cal.com"});
-        Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#2563eb"}},"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
 </body>
+
 </html>

@@ -139,3 +139,33 @@ if (contactForm) {
         }
     });
 }
+
+
+
+/* ==========================================================================
+   EXPANDABLE TIMELINE ACHIEVEMENTS ACTIONS
+   ========================================================================== */
+function toggleExperienceDetails(btn) {
+    const timelineContent = btn.closest('.timeline-content');
+    if (!timelineContent) return;
+    
+    const expandedEl = timelineContent.querySelector('.experience-details-expanded');
+    if (!expandedEl) return;
+    
+    const isClosed = !expandedEl.classList.contains('open');
+    
+    if (isClosed) {
+        // Expand: add class and set exact scrollHeight
+        expandedEl.classList.add('open');
+        expandedEl.style.maxHeight = expandedEl.scrollHeight + 'px';
+        btn.innerHTML = `<i class='bx bx-chevron-up'></i> Hide Achievements`;
+    } else {
+        // Collapse: reset height and remove class
+        expandedEl.style.maxHeight = '0px';
+        expandedEl.classList.remove('open');
+        btn.innerHTML = `<i class='bx bx-chevron-down'></i> Show Achievements`;
+    }
+}
+
+// Expose globally for inline onclick triggers
+window.toggleExperienceDetails = toggleExperienceDetails;
