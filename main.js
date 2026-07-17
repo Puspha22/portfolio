@@ -3,7 +3,7 @@
 ============================= */
 const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
-// UPDATED: Selects both regular links AND the new "Book a Call" button
+// Select all navigation links
 const navLinks = document.querySelectorAll('.nav-link, .nav-cta'); 
 
 // Show/Hide Menu on Mobile
