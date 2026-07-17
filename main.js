@@ -10,9 +10,11 @@ const navLinks = document.querySelectorAll('.nav-link, .nav-cta');
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('show-menu');
+        const isExpanded = navMenu.classList.contains('show-menu');
+        navToggle.setAttribute('aria-expanded', isExpanded);
         
         const icon = navToggle.querySelector('i');
-        if (navMenu.classList.contains('show-menu')) {
+        if (isExpanded) {
             icon.classList.remove('bx-menu');
             icon.classList.add('bx-x');
         } else {
@@ -26,10 +28,13 @@ if (navToggle) {
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
-        const icon = navToggle.querySelector('i');
-        if(icon) {
-            icon.classList.remove('bx-x');
-            icon.classList.add('bx-menu');
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', 'false');
+            const icon = navToggle.querySelector('i');
+            if(icon) {
+                icon.classList.remove('bx-x');
+                icon.classList.add('bx-menu');
+            }
         }
     });
 });
@@ -74,23 +79,21 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 /* =============================
-   FILE OPENING FUNCTIONS
+   DYNAMIC COPYRIGHT YEAR
 ============================= */
-function openExperienceLetter(company) {
-    if (company === 'cedar') {
-        window.open("assets/docs/CedarGate_Exp.pdf");
-    } else if (company === 'dekods') {
-        window.open("assets/docs/Dekods_Exp.pdf");
+window.addEventListener('DOMContentLoaded', () => {
+    const copyrightYear = document.getElementById('copyright-year');
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
     }
-}
-// Note: downloadResume() and openTranscript() were removed as they 
-// are not currently connected to buttons in the new layout.
+});
 
 /* =============================
-   AJAX CONTACT FORM (New!)
+   AJAX CONTACT FORM
    Prevents page reload on submit
 ============================= */
 const contactForm = document.querySelector('.contact-form');
+const feedbackBanner = document.getElementById('form-feedback');
 
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
@@ -98,6 +101,11 @@ if (contactForm) {
         
         const btn = contactForm.querySelector('button');
         const originalText = btn.innerText;
+        
+        // Hide previous feedback
+        if (feedbackBanner) {
+            feedbackBanner.style.display = 'none';
+        }
         
         // 1. Show Loading State
         btn.innerText = 'Sending...';
@@ -122,6 +130,12 @@ if (contactForm) {
                 btn.style.backgroundColor = '#059669'; // Green
                 contactForm.reset();
                 
+                if (feedbackBanner) {
+                    feedbackBanner.className = 'form-feedback success';
+                    feedbackBanner.innerText = 'Thank you! Your message has been sent successfully.';
+                    feedbackBanner.style.display = 'block';
+                }
+                
                 // Reset button after 3 seconds
                 setTimeout(() => {
                     btn.innerText = originalText;
@@ -133,14 +147,17 @@ if (contactForm) {
             }
         } catch (error) {
             // Error State
-            alert("Oops! There was a problem sending your form. Please try again.");
             btn.innerText = originalText;
             btn.style.opacity = '1';
+            
+            if (feedbackBanner) {
+                feedbackBanner.className = 'form-feedback error';
+                feedbackBanner.innerText = 'Oops! There was a problem sending your message. Please try again.';
+                feedbackBanner.style.display = 'block';
+            }
         }
     });
 }
-
-
 
 /* ==========================================================================
    EXPANDABLE TIMELINE ACHIEVEMENTS ACTIONS
@@ -159,11 +176,16 @@ function toggleExperienceDetails(btn) {
         expandedEl.classList.add('open');
         expandedEl.style.maxHeight = expandedEl.scrollHeight + 'px';
         btn.innerHTML = `<i class='bx bx-chevron-up'></i> Hide Achievements`;
+        btn.setAttribute('aria-expanded', 'true');
     } else {
         // Collapse: reset height and remove class
         expandedEl.style.maxHeight = '0px';
         expandedEl.classList.remove('open');
         btn.innerHTML = `<i class='bx bx-chevron-down'></i> Show Achievements`;
+        btn.setAttribute('aria-expanded', 'false');
+        
+        // UX improvement: smooth scroll back to card top on collapse
+        timelineContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
 

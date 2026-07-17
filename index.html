@@ -52,7 +52,7 @@
     <header id="header">
         <div class="container nav-container">
             <a href="#hero" class="nav-brand">Puspha.</a>
-            <div class="nav-toggle" id="nav-toggle"><i class='bx bx-menu'></i></div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class='bx bx-menu'></i></button>
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -196,8 +196,8 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22/brain-tumor-segmentation-unet-segnet" target="_blank"
-                                class="btn-link">View Model Code <i class='bx bx-right-arrow-alt'></i></a>
+                             <a href="https://github.com/Puspha22/brain-tumor-segmentation-unet-segnet" target="_blank" rel="noopener noreferrer"
+                                 class="btn-link">View Model Code <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
@@ -215,7 +215,7 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22/ecommerce-cart-abandonment-clean" target="_blank" class="btn-link">View Project Code <i class='bx bx-right-arrow-alt'></i></a>
+                             <a href="https://github.com/Puspha22/ecommerce-cart-abandonment-clean" target="_blank" rel="noopener noreferrer" class="btn-link">View Project Code <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
@@ -233,8 +233,8 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22" target="_blank" class="btn-link">View Project <i
-                                    class='bx bx-right-arrow-alt'></i></a>
+                             <a href="https://github.com/Puspha22" target="_blank" rel="noopener noreferrer" class="btn-link">View Project <i
+                                     class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
@@ -253,8 +253,8 @@
                             </div>
                         </div>
                         <div class="project-action">
-                            <a href="https://github.com/Puspha22/llm-bias-comparative-analysis" target="_blank"
-                                class="btn-link">View Research Repo <i class='bx bx-right-arrow-alt'></i></a>
+                             <a href="https://github.com/Puspha22/llm-bias-comparative-analysis" target="_blank" rel="noopener noreferrer"
+                                 class="btn-link">View Research Repo <i class='bx bx-right-arrow-alt'></i></a>
                         </div>
                     </div>
 
@@ -283,7 +283,7 @@
                             </p>
                             
                             <!-- EXPANDABLE ACHIVEMENTS (ACCORDION) -->
-                            <div class="experience-details-expanded">
+                            <div class="experience-details-expanded" id="cedar-details">
                                 <ul class="resume-bullet-list">
                                     <li>Managed the ingestion and transformation of high-volume healthcare data for a platform covering 3.2M lives and $91B in medical spend, ensuring data readiness for downstream analytics.</li>
                                     <li>Engineered an Automated Data Validation Framework using Python and SQL to systematically audit data integrity, replacing manual schema checks and correcting over 500 monthly data quality discrepancies.</li>
@@ -296,8 +296,8 @@
                             </div>
                             
                             <div class="timeline-actions">
-                                <a href="#" onclick="openExperienceLetter('cedar')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
-                                <button class="btn-expand-experience" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
+                                <a href="assets/docs/CedarGate_Exp.pdf" target="_blank" rel="noopener noreferrer" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                                <button class="btn-expand-experience" aria-expanded="false" aria-controls="cedar-details" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
                             </div>
                         </div>
                     </div>
@@ -315,7 +315,7 @@
                             </p>
                             
                             <!-- EXPANDABLE ACHIVEMENTS (ACCORDION) -->
-                            <div class="experience-details-expanded">
+                            <div class="experience-details-expanded" id="dekods-details">
                                 <ul class="resume-bullet-list">
                                     <li>Cleaned and processed 100,000 record files for a UNICEF initiative to upgrade various infrastructures in Nepal's rural communities, reducing manual data entry effort by 90%.</li>
                                     <li>Performed exploratory data analysis using Python and Pandas, and designed automated data cleaning and transformation scripts.</li>
@@ -325,8 +325,8 @@
                             </div>
                             
                             <div class="timeline-actions">
-                                <a href="#" onclick="openExperienceLetter('dekods')" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
-                                <button class="btn-expand-experience" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
+                                <a href="assets/docs/Dekods_Exp.pdf" target="_blank" rel="noopener noreferrer" class="link-item">View Experience Letter <i class='bx bx-right-arrow-alt'></i></a>
+                                <button class="btn-expand-experience" aria-expanded="false" aria-controls="dekods-details" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
                             </div>
                         </div>
                     </div>
@@ -344,7 +344,7 @@
                             </p>
                             
                             <!-- EXPANDABLE ACHIVEMENTS (ACCORDION) -->
-                            <div class="experience-details-expanded">
+                            <div class="experience-details-expanded" id="eydean-details">
                                 <ul class="resume-bullet-list">
                                     <li>Developed and deployed sales forecasting models (ARIMA, SARIMA, LSTM) for 12 warehouses, reducing inventory stockouts by an estimated 18%.</li>
                                     <li>Engineered customer service chatbots using NLP (BERT) and Neural Networks, handling 500+ weekly queries with 85% intent recognition accuracy.</li>
@@ -359,7 +359,7 @@
                             </div>
                             
                             <div class="timeline-actions text-right">
-                                <button class="btn-expand-experience" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
+                                <button class="btn-expand-experience" aria-expanded="false" aria-controls="eydean-details" onclick="toggleExperienceDetails(this)"><i class='bx bx-chevron-down'></i> Show Achievements</button>
                             </div>
                         </div>
                     </div>
@@ -390,14 +390,14 @@
                         <div class="connect-section">
                             <h3>Connect & Downloads</h3>
                             <div class="connect-links">
-                                <a href="assets/docs/Resume.pdf" target="_blank" class="connect-btn resume-btn">
+                                <a href="assets/docs/Resume.pdf" target="_blank" rel="noopener noreferrer" class="connect-btn resume-btn">
                                     <i class='bx bxs-file-pdf'></i> Resume
                                 </a>
                                 <div class="social-icons">
-                                    <a href="https://github.com/Puspha22" target="_blank"><i
+                                    <a href="https://github.com/Puspha22" target="_blank" rel="noopener noreferrer"><i
                                             class='bx bxl-github'></i></a>
                                     <a href="https://www.linkedin.com/in/puspha-raj-pandeya-92714a193/"
-                                        target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                        target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
                                 </div>
                             </div>
                         </div>
@@ -414,6 +414,7 @@
                             <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div id="form-feedback" class="form-feedback" style="margin-top: 1rem; font-size: 0.9rem; font-weight: 500; display: none;"></div>
                     </form>
                 </div>
             </div>
@@ -423,7 +424,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Puspha Raj Pandeya. All rights reserved.</p>
+            <p>&copy; <span id="copyright-year">2026</span> Puspha Raj Pandeya. All rights reserved.</p>
         </div>
     </footer>
 
